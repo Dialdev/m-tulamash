@@ -1,0 +1,6 @@
+<Files ~ "\.(php|php5|php4|php3|phtml|pl)$">
+deny from all
+</Files>
+
+RemoveHandler cgi-script .pl .py .cgi
+AddType text/plain .pl .py .cgi

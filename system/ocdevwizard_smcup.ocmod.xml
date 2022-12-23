@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+##==================================================================##
+## @author    : OCdevWizard                                         ##
+## @contact   : ocdevwizard@gmail.com                               ##
+## @support   : http://help.ocdevwizard.com                         ##
+## @license   : http://license.ocdevwizard.com/Licensing_Policy.pdf ##
+## @copyright : © OCdevWizard. Smart Contact Us Pro, 2017           ##
+##==================================================================##
+-->
+
+<modification>
+  <code>ocdev_smart_contact_us_pro_101</code>
+  <name>Ocdevwizard: Smart Contact Us Pro</name>
+  <version>1.0.1</version>
+  <author>ocdevwizard@gmail.com</author>
+  <link>http://www.opencart.com/index.php?route=extension/extension&amp;filter_username=OCdevWizard</link>
+  <!-- admin area -->
+  <!-- sart: For 2.0.x ... 2.1.x -->
+  <file path="admin/controller/user/user_permission.php">
+    <operation error="skip">
+      <search><![CDATA[if (isset($this->request->post['permission']['access'])) {]]></search>
+      <add position="before"><![CDATA[
+        // start: OCdevWizard SMCUP
+        if (version_compare(VERSION, '2.2.0.0', '<=') && !in_array('extension/ocdevwizard/smart_contact_us_pro', $data['permissions'])) {
+          $data['permissions'][] = 'extension/ocdevwizard/smart_contact_us_pro';
+        }
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+  </file>
+  <file path="admin/controller/error/permission.php">
+    <operation error="skip">
+      <search><![CDATA[$ignore = array(]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        'extension/ocdevwizard',
+        'extension/ocdevwizard/smart_contact_us_pro',
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+  </file>
+  <!-- end: For 2.0.x ... 2.1.x -->
+  <!-- sart: For 2.3.x -->
+  <file path="admin/controller/startup/permission.php">
+    <operation error="skip">
+      <search><![CDATA[$ignore = array(]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        'extension/ocdevwizard/smart_contact_us_pro',
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+  </file>
+  <file path="admin/controller/common/column_left.php">
+    <operation error="skip">
+      <search><![CDATA[$ocdevwizard = array();]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        if (version_compare(VERSION, '3.0.0.0', '>=')) {
+          $ocdevwizard[] = array(
+            'name'     => $this->language->get('text_smart_contact_us_pro_left_menu'),
+            'href'     => $this->url->link('extension/ocdevwizard/smart_contact_us_pro', 'user_token='.$this->session->data['user_token'].'&store_id=0', true),
+            'children' => array()
+          );
+        } else {
+          $ocdevwizard[] = array(
+            'name'     => $this->language->get('text_smart_contact_us_pro_left_menu'),
+            'href'     => $this->url->link('extension/ocdevwizard/smart_contact_us_pro', 'token='.$this->session->data['token'].'&store_id=0', true),
+            'children' => array()
+          );
+        }
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+  </file>
+  <file path="admin/language/*/common/column_left.php">
+    <operation error="skip">
+      <search><![CDATA[<?php]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        $_['text_smart_contact_us_pro_left_menu'] = 'Smart Contact Us Pro';
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+  </file>
+  <!-- end: For 2.3.x -->
+  <!-- sart: For 2.2.x -->
+  <file path="admin/controller/common/menu.php">
+    <operation error="skip">
+      <search><![CDATA[$this->load->language('common/menu');]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        $data['text_smart_contact_us_pro_left_menu'] = $this->language->get('text_smart_contact_us_pro_left_menu');
+        $data['smart_contact_us_pro_link'] = $this->url->link('extension/ocdevwizard/smart_contact_us_pro', 'token='.$this->session->data['token'].'&store_id=0', 'SSL');
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+  </file>
+  <file path="admin/language/*/common/menu.php">
+    <operation error="skip">
+      <search><![CDATA[<?php]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        $_['text_smart_contact_us_pro_left_menu'] = 'Smart Contact Us Pro';
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+  </file>
+  <file path="admin/view/template/common/menu.tpl">
+    <operation error="skip">
+      <search><![CDATA[<li id="ocdevwizard"><a class="parent"><i class="fa fa-lightbulb-o fa-fw" aria-hidden="true"></i> <span><?php echo $text_ocdevwizard; ?></span></a><ul>]]></search>
+      <add position="replace"><![CDATA[
+        <li id="ocdevwizard"><a class="parent"><i class="fa fa-lightbulb-o fa-fw" aria-hidden="true"></i> <span><?php echo $text_ocdevwizard; ?></span></a><ul>
+        <li><a href="<?php echo $smart_contact_us_pro_link; ?>"><span><?php echo $text_smart_contact_us_pro_left_menu; ?></span></a></li>
+      ]]></add>
+    </operation>
+  </file>
+  <!-- end: For 2.2.x -->
+  <file path="admin/controller/common/header.php">
+    <operation error="skip">
+      <search><![CDATA[public function index() {]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        $this->load->language('extension/ocdevwizard/smart_contact_us_pro_widget');
+        $this->load->model('extension/ocdevwizard/smart_contact_us_pro');
+        $this->load->model('extension/ocdevwizard/ocdevwizard_setting');
+        $this->model_extension_ocdevwizard_smart_contact_us_pro->createDBTables();
+        $data['smcup_form_data'] = $smcup_form_data = (array)$this->model_extension_ocdevwizard_ocdevwizard_setting->getSettingData('smart_contact_us_pro_form_data', (int)$this->config->get('config_store_id'));
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+    <operation error="skip">
+      <search><![CDATA[$data['alerts'] = $customer_total + $product_total + $review_total + $return_total + $affiliate_total;]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        if (isset($smcup_form_data['activate']) && $smcup_form_data['activate'] && $smcup_form_data['show_on_top_notification']) {
+          $data['text_smart_contact_us_pro'] = $this->language->get('text_smart_contact_us_pro');
+          $data['text_total_smart_contact_us_pro_1'] = $this->language->get('text_total_smart_contact_us_pro_1');
+          $data['text_total_smart_contact_us_pro_2'] = $this->language->get('text_total_smart_contact_us_pro_2');
+          $data['text_total_smart_contact_us_pro_3'] = $this->language->get('text_total_smart_contact_us_pro_3');
+          $data['smart_contact_us_pro_url'] = $this->url->link('extension/ocdevwizard/smart_contact_us_pro', 'token='.$this->session->data['token'], 'SSL');
+          $data['total_smart_contact_us_pro_1'] = $this->model_extension_ocdevwizard_smart_contact_us_pro->getTotalRecordsForWidget(array('filter_viewed' => 1));
+          $data['total_smart_contact_us_pro_2'] = $this->model_extension_ocdevwizard_smart_contact_us_pro->getTotalRecordsForWidget(array('filter_viewed' => 0));
+          $data['total_smart_contact_us_pro_3'] = $this->model_extension_ocdevwizard_smart_contact_us_pro->getTotalRecordsForWidget();
+          $data['alerts'] = $data['alerts'] + $data['total_smart_contact_us_pro_2'];
+        }
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+  </file>
+  <file path="admin/controller/common/dashboard.php">
+    <operation error="skip">
+      <search><![CDATA[public function index() {]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        if (version_compare(VERSION, '2.3.0.2', '<')) {
+          $this->load->model('extension/ocdevwizard/ocdevwizard_setting');
+          $smcup_form_data = (array)$this->model_extension_ocdevwizard_ocdevwizard_setting->getSettingData('smart_contact_us_pro_form_data', (int)$this->config->get('config_store_id'));
+
+          if (isset($smcup_form_data['activate']) && $smcup_form_data['activate'] && $smcup_form_data['show_on_dashboard']) {
+            $data['smcup_widget'] = $this->load->controller('extension/ocdevwizard/smart_contact_us_pro/widget');
+          }
+        }
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+    <operation error="skip">
+      <search><![CDATA[foreach ($extensions as $code) {]]></search>
+      <add position="before"><![CDATA[
+        // start: OCdevWizard SMCUP
+        if (version_compare(VERSION, '2.3.0.2', '>=')) {
+          $this->load->model('extension/ocdevwizard/ocdevwizard_setting');
+          $smcup_form_data = (array)$this->model_extension_ocdevwizard_ocdevwizard_setting->getSettingData('smart_contact_us_pro_form_data', (int)$this->config->get('config_store_id'));
+
+          if (isset($smcup_form_data['activate']) && $smcup_form_data['activate'] && $smcup_form_data['show_on_dashboard']) {
+            $dashboards[] = array(
+              'code'       => 'smart_contact_us_pro_widget',
+              'width'      => 3,
+              'sort_order' => 0,
+              'output'     => $this->load->controller('extension/ocdevwizard/smart_contact_us_pro/widget')
+            );
+          }
+        }
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+  </file>
+  <file path="admin/controller/design/layout.php">
+    <operation error="skip">
+      <search><![CDATA[$data['modules'] = array();]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        if (version_compare(VERSION, '2.0.0.0', '=')) {
+          $this->load->model('extension/ocdevwizard/smart_contact_us_pro');
+          $this->load->model('extension/ocdevwizard/ocdevwizard_setting');
+
+          $smcup_form_data = (array)$this->model_extension_ocdevwizard_ocdevwizard_setting->getSettingData('smart_contact_us_pro_form_data', (int)$this->config->get('config_store_id'));
+          $smcup_forms = $this->model_extension_ocdevwizard_smart_contact_us_pro->getForms(array('filter_display_type' => 2));
+
+          if (isset($smcup_form_data['activate']) && $smcup_form_data['activate'] && $smcup_forms) {
+            $smcup_module_data = array();
+
+            $smcup_i = 1;
+
+            foreach ($smcup_forms as $smcup_form) {
+              $smcup_module_data[] = array(
+                'name' => $smcup_form['heading'].' '.$smcup_i++,
+                'code' => 'smart_contact_us_pro.'.$smcup_form['form_id']
+              );
+            }
+            
+            if ($smcup_module_data) {
+              $data['modules'][] = array(
+                'name'   => 'Smart Contact Us Pro',
+                'module' => $smcup_module_data
+              );
+            }
+          }
+        }
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+    <operation error="skip">
+      <search><![CDATA[$data['extensions'] = array();]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        if (version_compare(VERSION, '2.0.0.0', '>') && version_compare(VERSION, '2.3.0.2', '<')) {
+          $this->load->model('extension/ocdevwizard/smart_contact_us_pro');
+          $this->load->model('extension/ocdevwizard/ocdevwizard_setting');
+
+          $smcup_form_data = (array)$this->model_extension_ocdevwizard_ocdevwizard_setting->getSettingData('smart_contact_us_pro_form_data', (int)$this->config->get('config_store_id'));
+          $smcup_forms = $this->model_extension_ocdevwizard_smart_contact_us_pro->getForms(array('filter_display_type' => 2));
+
+          if (isset($smcup_form_data['activate']) && $smcup_form_data['activate'] && $smcup_forms) {
+            $smcup_module_data = array();
+
+            foreach ($smcup_forms as $smcup_form) {
+              $smcup_module_data[] = array(
+                'name' => 'Smart Contact Us Pro &gt; '.$smcup_form['heading'],
+                'code' => 'smart_contact_us_pro.'.$smcup_form['form_id']
+              );
+            }
+            
+            if ($smcup_module_data) {
+              $data['extensions'][] = array(
+                'name'   => 'Smart Contact Us Pro',
+                'code'   => 'smart_contact_us_pro',
+                'module' => $smcup_module_data
+              );
+            }
+          }
+        }
+
+        if (version_compare(VERSION, '2.3.0.2', '>=')) {
+          $this->load->model('extension/ocdevwizard/smart_contact_us_pro');
+          $this->load->model('extension/ocdevwizard/ocdevwizard_setting');
+
+          $smcup_form_data = (array)$this->model_extension_ocdevwizard_ocdevwizard_setting->getSettingData('smart_contact_us_pro_form_data', (int)$this->config->get('config_store_id'));
+          $smcup_forms = $this->model_extension_ocdevwizard_smart_contact_us_pro->getForms(array('filter_display_type' => 2));
+
+          if (isset($smcup_form_data['activate']) && $smcup_form_data['activate'] && $smcup_forms) {
+            $smcup_module_data = array();
+
+            foreach ($smcup_forms as $smcup_form) {
+              $smcup_module_data[] = array(
+                'name' => strip_tags($smcup_form['heading']),
+                'code' => 'smart_contact_us_pro.'.$smcup_form['form_id']
+              );
+            }
+            
+            if ($smcup_module_data) {
+              $data['extensions'][] = array(
+                'name'   => 'Smart Contact Us Pro',
+                'code'   => 'smart_contact_us_pro',
+                'module' => $smcup_module_data
+              );
+            }
+          }
+        }
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+    <operation error="skip">
+      <search><![CDATA[$data['layout_modules'] = array();]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        $this->load->model('extension/ocdevwizard/smart_contact_us_pro');
+        $this->load->model('extension/ocdevwizard/ocdevwizard_setting');
+
+        $smcup_form_data = (array)$this->model_extension_ocdevwizard_ocdevwizard_setting->getSettingData('smart_contact_us_pro_form_data', (int)$this->config->get('config_store_id'));
+        $smcup_forms = $this->model_extension_ocdevwizard_smart_contact_us_pro->getForms(array('filter_display_type' => 2));
+
+        if (isset($smcup_form_data['activate']) && $smcup_form_data['activate'] && $smcup_forms) {
+          foreach ($smcup_forms as $smcup_form) {
+            if (version_compare(VERSION, '2.3.0.2', '>=') && version_compare(VERSION, '3.0.0.0', '<')) {
+              $data['layout_modules'][] = array(
+                'name'       => 'Smart Contact Us Pro',
+                'code'       => 'smart_contact_us_pro.'.$smcup_form['form_id'],
+                'edit'       => $this->url->link('extension/ocdevwizard/smart_contact_us_pro', 'token=' . $this->session->data['token'], true),
+                'position'   => $smcup_form['position'],
+                'sort_order' => $smcup_form['sort_order']
+              );
+            }
+
+            if (version_compare(VERSION, '3.0.0.0', '>=')) {
+              $data['layout_modules'][] = array(
+                'name'       => 'Smart Contact Us Pro',
+                'code'       => 'smart_contact_us_pro.'.$smcup_form['form_id'],
+                'edit'       => $this->url->link('extension/ocdevwizard/smart_contact_us_pro', 'user_token=' . $this->session->data['user_token'], true),
+                'position'   => $smcup_form['position'],
+                'sort_order' => $smcup_form['sort_order']
+              );
+            }
+          }
+        }
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+  </file>
+  <file path="admin/view/template/common/header.tpl">
+    <operation error="skip">
+      <search><![CDATA[<li class="dropdown-header"><?php echo $text_order; ?></li>]]></search>
+      <add position="before"><![CDATA[
+        <?php if (isset($smcup_form_data['activate']) && $smcup_form_data['activate'] && $smcup_form_data['show_on_dashboard']) { ?>
+        <!-- start: OCdevWizard SMCUP -->
+        <li class="dropdown-header"><?php echo $text_smart_contact_us_pro; ?></li>
+        <li><a href="<?php echo $smart_contact_us_pro_url; ?>" style="display: block; overflow: auto;"><span class="label label-warning pull-right"><?php echo $total_smart_contact_us_pro_1; ?></span><?php echo $text_total_smart_contact_us_pro_1; ?></a></li>
+        <li><a href="<?php echo $smart_contact_us_pro_url; ?>" style="display: block; overflow: auto;"><span class="label label-warning pull-right"><?php echo $total_smart_contact_us_pro_2; ?></span><?php echo $text_total_smart_contact_us_pro_2; ?></a></li>
+        <li><a href="<?php echo $smart_contact_us_pro_url; ?>" style="display: block; overflow: auto;"><span class="label label-warning pull-right"><?php echo $total_smart_contact_us_pro_3; ?></span><?php echo $text_total_smart_contact_us_pro_3; ?></a></li>
+        <li class="divider"></li>
+        <!-- end: OCdevWizard SMCUP -->
+        <?php } ?>
+      ]]></add>
+    </operation>
+  </file>
+  <file path="admin/view/template/common/dashboard.tpl">
+    <operation error="skip">
+      <search><![CDATA[<div class="col-lg-3 col-md-3 col-sm-6"><?php echo $order; ?></div>]]></search>
+      <add position="before"><![CDATA[
+        <?php if (isset($smcup_widget)) { ?>
+        <!-- start: OCdevWizard SMCUP -->
+        <div class="col-lg-3 col-md-3 col-sm-6"><?php echo $smcup_widget; ?></div>
+        <!-- end: OCdevWizard SMCUP -->
+        <?php } ?>
+      ]]></add>
+    </operation>
+  </file>
+  <!-- catalog area -->
+  <file path="catalog/controller/common/header.php">
+    <operation error="skip">
+      <search><![CDATA[public function index() {]]></search>
+      <add position="before"><![CDATA[
+        // start: OCdevWizard SMCUP
+        public function smcup_js_create($data) {
+          if ($data) {
+            $script  = "";
+            $script .= "$(function() {\r\n";
+            $script .= "  $.ajax({\r\n";
+            $script .= "    type: 'post',\r\n";
+            $script .= "    url: 'index.php?route=extension/ocdevwizard/smart_contact_us_pro/getForms',\r\n";
+            $script .= "    dataType: 'json',\r\n";
+            $script .= "    success: function(json) {\r\n";
+            $script .= "      $.each(json['forms'], function(i,value) {\r\n";
+            $script .= "        if (value['display_type'] == 1) {\r\n";
+            $script .= "          $.each(value['add_id_selector'], function(i,i_selector) {\r\n";
+            $script .= "            if (value['popup_button_type'] == 1) {\r\n";
+            $script .= "              if (value['location'] == 1) {\r\n";
+            $script .= "                $('#'+i_selector).before(\"<button class='\"+value['button_class']+\" smcup-call-static-button' onclick='getOCwizardModal_smcup(\"+value['form_id']+\", 1)'>\"+value['call_button']+\"</button>\");\r\n";
+            $script .= "              } else if (value['location'] == 2) {\r\n";
+            $script .= "                $('#'+i_selector).prepend(\"<button class='\"+value['button_class']+\" smcup-call-static-button' onclick='getOCwizardModal_smcup(\"+value['form_id']+\", 1)'>\"+value['call_button']+\"</button>\");\r\n";
+            $script .= "              } else if (value['location'] == 3) {\r\n";
+            $script .= "                $('#'+i_selector).append(\"<button class='\"+value['button_class']+\" smcup-call-static-button' onclick='getOCwizardModal_smcup(\"+value['form_id']+\", 1)'>\"+value['call_button']+\"</button>\");\r\n";
+            $script .= "              } else {\r\n";
+            $script .= "                $('#'+i_selector).after(\"<button class='\"+value['button_class']+\" smcup-call-static-button' onclick='getOCwizardModal_smcup(\"+value['form_id']+\", 1)'>\"+value['call_button']+\"</button>\");\r\n";
+            $script .= "              }\r\n";
+            $script .= "            } else {\r\n";
+            $script .= "               $('body').append(\"<button id='\"+value['float_button_id_selector']+\"' class='smcup-call-float-button' onclick='getOCwizardModal_smcup(\"+value['form_id']+\", 1)'>\"+value['call_button']+\"</button>\");\r\n";
+            $script .= "            }\r\n";
+            $script .= "          });\r\n";
+            $script .= "        } else if(value['display_type'] == 3) {\r\n";
+            $script .= "          if (value['sidebar_type'] == 1) {\r\n";
+            $script .= "            $('body').before(\"<div id='smcup-sidebar-\"+value['form_id']+\"' class='smcup-sidebar smcup-sidebar-left'></div><button class='smcup-call-sidebar-button' id='\"+value['sidebar_button_id_selector']+\"' onclick='getOCwizardModal_smcup(\"+value['form_id']+\", 2, \"+value['sidebar_type']+\")'>\"+value['call_button']+\"</button>\");\r\n";
+            $script .= "          } else {\r\n";
+            $script .= "            $('body').before(\"<div id='smcup-sidebar-\"+value['form_id']+\"' class='smcup-sidebar smcup-sidebar-right'></div><button class='smcup-call-sidebar-button' id='\"+value['sidebar_button_id_selector']+\"' onclick='getOCwizardModal_smcup(\"+value['form_id']+\", 2, \"+value['sidebar_type']+\")'>\"+value['call_button']+\"</button>\");\r\n";
+            $script .= "          }\r\n";
+            $script .= "        }\r\n";
+            $script .= "      });\r\n";
+            $script .= "    }\r\n";
+            $script .= "  });\r\n";
+            $script .= "});\r\n";
+            $script .= "function getOCwizardModal_smcup(form_id, popup_button_type, sidebar_type = 0) {\r\n";
+            $script .= "  if (popup_button_type == 1) {\r\n";
+            $script .= "    $.magnificPopup.open({\r\n";
+            $script .= "      tLoading: '<img src=\"catalog/view/theme/default/stylesheet/ocdevwizard/smart_contact_us_pro/loading.svg\" alt=\"\" />',\r\n";
+            $script .= "      items: {\r\n";
+            $script .= "        src: 'index.php?route=extension/ocdevwizard/smart_contact_us_pro&form_id='+form_id+'&popup_button_type='+popup_button_type,\r\n";
+            $script .= "        type: 'ajax'\r\n";
+            $script .= "      },\r\n";
+            $script .= "      showCloseBtn: false,\r\n";
+            $script .= "      callbacks: {\r\n";
+            $script .= "        open: function() {\r\n";
+            $script .= "          $('.mfp-content').addClass('mfp-with-anim');\r\n";
+            $script .= "        },\r\n";
+            $script .= "      }\r\n";
+            $script .= "    });\r\n";
+            $script .= "    $('.mfp-bg').css({\r\n";
+            $script .= "      'background': 'url(image/catalog/ocdevwizard/smart_contact_us_pro/background/".$data['style_background'].")',\r\n";
+            $script .= "      'opacity': '".(($data['background_opacity'] == 0) ? $data['background_opacity'] : $data['background_opacity']/10)."'\r\n";
+            $script .= "    });\r\n";
+            $script .= "  } else {\r\n";
+            $script .= "    $('#smcup-sidebar-'+form_id).load('index.php?route=extension/ocdevwizard/smart_contact_us_pro&form_id='+form_id+'&popup_button_type='+popup_button_type);\r\n";
+            $script .= "    $('#smcup-sidebar-'+form_id).css('width', '250px');\r\n";
+            $script .= "  }\r\n";
+            $script .= "}\r\n";
+            $script .= "function smcup_sidebar_close(form_id, sidebar_type) {\r\n";
+            $script .= "  $('#smcup-sidebar-'+form_id).css('width', '0');\r\n";
+            $script .= "}\r\n";
+            $script .= "function smcup_static_save_record(form_id) {\r\n";
+            $script .= "  $.ajax({\r\n";
+            $script .= "    type: 'post',\r\n";
+            $script .= "    url: 'index.php?route=extension/ocdevwizard/smart_contact_us_pro_static/save_record',\r\n";
+            $script .= "    dataType: 'json',\r\n";
+            $script .= "    data: $('#smcup-form-'+form_id).serialize(),\r\n";
+            $script .= "    beforeSend: function() {\r\n";
+            $script .= "      $('#smcup-static-data-'+form_id+' button').button('loading');\r\n";
+            $script .= "    },\r\n";
+            $script .= "    complete: function() {\r\n";
+            $script .= "      $('#smcup-static-data-'+form_id+' button').button('reset');\r\n";
+            $script .= "    },\r\n";
+            $script .= "    success: function(json) {\r\n";
+            $script .= "      $('#smcup-static-data-'+form_id+' .alert-success').remove();\r\n";
+            $script .= "      $('#smcup-static-data-'+form_id+' .static-text-danger').remove();\r\n";
+            $script .= "      if (json['error']) {\r\n";
+            $script .= "        if (json['error']['field']) {\r\n";
+            $script .= "          for (i in json['error']['field']) {\r\n";
+            $script .= "            var element = $('#smcup-static-data-'+form_id+' [data-error-name='+i+']');\r\n";
+            $script .= "            element.append('<div class=\"static-text-danger\">'+json['error']['field'][i]+'</div>');\r\n";
+            $script .= "          }\r\n";
+            $script .= "        }\r\n";
+            $script .= "      } else {\r\n";
+            $script .= "        if (json['output']) {\r\n";
+            $script .= "          $('#smcup-static-data-'+form_id+' button').removeAttr('onclick');\r\n";
+            $script .= "          $('#smcup-static-data-'+form_id+' .list-group').prepend('<div class=\"list-group-item\"><div class=\"alert alert-success smcup-fix-alert\"><i class=\"fa fa-check-circle\"></i> '+json['output']+'</div></div>');\r\n";
+            $script .= "        }\r\n";
+            $script .= "      }\r\n";
+            $script .= "    }\r\n";
+            $script .= "  });\r\n";
+            $script .= "}\r\n";
+
+            if (!file_exists(DIR_APPLICATION.'view/javascript/ocdevwizard/smart_contact_us_pro/main.js')) {
+              file_put_contents(DIR_APPLICATION.'view/javascript/ocdevwizard/smart_contact_us_pro/main.js', $script);
+            }
+          }
+        }
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+    <operation error="skip">
+      <search><![CDATA[public function index() {]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        $this->load->model('extension/ocdevwizard/ocdevwizard_setting');
+
+        $smcup_form_data = $this->model_extension_ocdevwizard_ocdevwizard_setting->getSettingData('smart_contact_us_pro_form_data', (int)$this->config->get('config_store_id'));
+
+        if (isset($smcup_form_data['activate']) && $smcup_form_data['activate']) {
+          $this->document->addScript("catalog/view/javascript/ocdevwizard/smart_contact_us_pro/jquery.magnific-popup.min.js?v=".$smcup_form_data['front_module_version']);
+          $this->document->addStyle("catalog/view/javascript/ocdevwizard/smart_contact_us_pro/magnific-popup.css?v=".$smcup_form_data['front_module_version']);
+          $this->document->addStyle("catalog/view/theme/default/stylesheet/ocdevwizard/smart_contact_us_pro/stylesheet.css?v=".$smcup_form_data['front_module_version']);
+          $this->document->addScript("catalog/view/javascript/ocdevwizard/smart_contact_us_pro/inputmask.js");
+          $this->document->addScript("catalog/view/javascript/ocdevwizard/smart_contact_us_pro/flatpickr/flatpickr.min.js?v=".$smcup_form_data['front_module_version']);
+          $this->document->addStyle("catalog/view/javascript/ocdevwizard/smart_contact_us_pro/flatpickr/flatpickr.min.css?v=".$smcup_form_data['front_module_version']);
+          $this->document->addScript("https://npmcdn.com/flatpickr/dist/l10n/".substr($this->session->data['language'], 0, 2).".js");
+
+          $this->load->model('extension/ocdevwizard/smart_contact_us_pro');
+
+          $language_id = $this->model_extension_ocdevwizard_smart_contact_us_pro->getLanguageByCode($this->session->data['language']);
+          
+          if (isset($smcup_form_data['direction_type'][$language_id]) && $smcup_form_data['direction_type'][$language_id] == '2') {
+            $this->document->addStyle("catalog/view/theme/default/stylesheet/ocdevwizard/smart_contact_us_pro/stylesheet_rtl.css?v=".$smcup_form_data['front_module_version']);
+          }
+
+          $this->smcup_js_create($smcup_form_data);
+
+          if (file_exists(DIR_APPLICATION.'view/javascript/ocdevwizard/smart_contact_us_pro/main.js')) {
+            $this->document->addScript("catalog/view/javascript/ocdevwizard/smart_contact_us_pro/main.js?v=".$smcup_form_data['front_module_version']);
+          }
+        }
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+  </file>
+  <file path="catalog/controller/common/{column_left,column_right,content_top,content_bottom}.php">
+    <operation error="skip">
+      <search><![CDATA[$data['modules'] = array();]]></search>
+      <add position="after"><![CDATA[
+        // start: OCdevWizard SMCUP
+        $this->load->model('extension/ocdevwizard/smart_contact_us_pro');
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+    <!-- start: For 2.0.0.0 -->
+    <operation error="skip">
+      <search><![CDATA[if ($code && $this->config->get($code . '_status')) {]]></search>
+      <add position="before"><![CDATA[
+        // start: OCdevWizard SMCUP
+        if (isset($code) && $code == 'smart_contact_us_pro') {
+          $data['modules'][] = $this->load->controller('extension/ocdevwizard/'.$code.'_static', $this->model_extension_ocdevwizard_smart_contact_us_pro->getForm($part[1]));
+        }
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+    <!-- end: For 2.0.0.0 -->
+    <operation error="skip">
+      <search><![CDATA[if (isset($part[0]) && $this->config->get($part[0] . '_status')) {]]></search>
+      <add position="before"><![CDATA[
+        // start: OCdevWizard SMCUP
+        if (isset($part[0]) && $part[0] == 'smart_contact_us_pro') {
+          $data['modules'][] = $this->load->controller('extension/ocdevwizard/'.$part[0].'_static', $this->model_extension_ocdevwizard_smart_contact_us_pro->getForm($part[1]));
+        }
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+    <operation error="skip">
+      <search><![CDATA[if (isset($part[0]) && $this->config->get('module_' . $part[0] . '_status')) {]]></search>
+      <add position="before"><![CDATA[
+        // start: OCdevWizard SMCUP
+        if (isset($part[0]) && isset($part[1]) && $part[0] == 'smart_contact_us_pro') {
+          $data['modules'][] = $this->load->controller('extension/ocdevwizard/'.$part[0].'_static', $this->model_extension_ocdevwizard_smart_contact_us_pro->getForm($part[1]));
+        }
+        // end: OCdevWizard SMCUP
+      ]]></add>
+    </operation>
+  </file>
+</modification>

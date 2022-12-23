@@ -1,0 +1,134 @@
+<div class="panel panel-default" id="{{ _code }}-static-data-{{ form_id }}">
+  <!--
+  ##==================================================================##
+  ## @author    : OCdevWizard                                         ##
+  ## @contact   : ocdevwizard@gmail.com                               ##
+  ## @support   : http://help.ocdevwizard.com                         ##
+  ## @license   : http://license.ocdevwizard.com/Licensing_Policy.pdf ##
+  ## @copyright : (c) OCdevWizard. Smart Contact Us Pro, 2017         ##
+  ##==================================================================##
+  -->
+  <div class="panel-heading">{{ heading_title }}</div>
+  {% if (fields_data) %}
+    <div class="list-group">
+      {% if (text_info is defined and hide_info_message == 1) %}
+      <div class="list-group-item">
+        <div class="info-text-block pos-1">{{ text_info }}</div>
+      </div>
+      {% endif %}
+      <form id="{{ _code }}-form-{{ form_id }}">
+        <input name="form_id" type="hidden" value="{{ form_id }}" />
+        <div class="{{ _code }}-center-body">
+          <!-- FIELDS DATA -->
+          {% for field in fields_data %}
+            <div class="list-group-item">
+              <h4 class="list-group-item-heading"><label><b>{{ field['title'] }}</b></label></h4>
+              {% if (field['type'] == 'textarea') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} class="form-group {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <textarea name="{{ field['name'] }}" placeholder="{{ field['title'] }}" class="form-control"></textarea>
+                </div>
+              {% elseif (field['type'] == 'radio') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="form-group {{ field['css_class'] ? field['css_class'] : "" }}">
+                  {% if (field['view_fields']) %}
+                    {% for value in field['view_fields'] %}
+                      <div class="radio">
+                        <label>
+                          <input name="{{ field['name'] }}" type="{{ field['type'] }}" value="{{ value }}" />
+                          <span style="display:inline-block;">{{ value }}</span>
+                        </label>
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                </div>
+              {% elseif (field['type'] == 'checkbox') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="form-group {{ field['css_class'] ? field['css_class'] : "" }}">
+                  {% if (field['view_fields']) %}
+                    {% for value in field['view_fields'] %}
+                      <div class="checkbox">
+                        <label>
+                          <input name="{{ field['name'] }}[]" type="{{ field['type'] }}" value="{{ value }}" />
+                          <span style="display:inline-block;">{{ value }}</span>
+                        </label>
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                </div>
+              {% elseif (field['type'] == 'select') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="form-group {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <select name="{{ field['name'] }}" class="form-control">
+                    <option value="">{{ text_make_a_choice }}</option>
+                    {% if (field['view_fields']) %}
+                      {% for value in field['view_fields'] %}
+                        <option value="{{ value }}">{{ value }}</option>
+                      {% endfor %}
+                    {% endif %}
+                  </select>
+                </div>
+              {% elseif (field['type'] == 'date') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="form-group {{ field['position']~' ' }} {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <input type="text" name="{{ field['name'] }}" value="" class="{{ _code }}-static-date-field form-control" placeholder="{{ field['title'] }}"/>
+                </div>
+              {% elseif (field['type'] == 'time') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="form-group {{ field['position']~' ' }} {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <input type="text" name="{{ field['name'] }}" value="" class="{{ _code }}-static-time-field form-control" placeholder="{{ field['title'] }}"/>
+                </div>
+              {% elseif (field['type'] == 'date_and_time') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="form-group {{ field['position']~' ' }} {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <input type="text" name="{{ field['name'] }}" value="" class="{{ _code }}-static-date-and-time-field form-control" placeholder="{{ field['title'] }}"/>
+                </div>
+              {% else %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="form-group {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <input name="{{ field['name'] }}" type="{{ field['type'] }}" placeholder="{{ field['title'] }}" class="form-control" />
+                </div>
+              {% endif %}
+              {% if (field['mask']) %}
+                <script type="text/javascript">
+                  $("#{{ _code }}-form-{{ form_id }} [name='{{ field['name'] }}']").inputmask('{{ field['mask'] }}');
+                </script>
+              {% endif %}
+            </div>
+          {% endfor %}
+          {% if (informations) %}
+            <div class="list-group-item">
+              <div class="static-require-information" data-error-name="require_information">{{ informations }} <input type="checkbox" name="require_information" value="{{ require_information ? 1 : 0 }}" /></div>
+            </div>
+          {% endif %}
+        </div>
+      </form>
+      {% if (text_info is defined and hide_info_message == 2) %}
+      <div class="list-group-item">
+        <div class="info-text-block pos-2">{{ text_info }}</div>
+      </div>
+      {% endif %}
+    </div>
+    <!-- BUTTONS -->
+    <div class="panel-footer text-right">
+      <button type="button" onclick="{{ _code }}_static_save_record('{{ form_id }}');" class="btn btn-primary">{{ button_save }}</button>
+    </div>
+  {% else %}
+    <div class="panel-body">{{ text_empty_form }}</div>
+  {% endif %}
+  <script type="text/javascript">
+    flatpickr.localize(flatpickr.l10ns.{{ _language_code }});
+
+    flatpickr('.{{ _code }}-static-date-field', {
+      dateFormat: "Y-m-d",
+      allowInput: true
+    });
+    
+    flatpickr('.{{ _code }}-static-date-and-time-field', {
+      enableTime: true,
+      dateFormat: "Y-m-d H:i",
+      time_24hr: true,
+      allowInput: true
+    });
+    
+    flatpickr('.{{ _code }}-static-time-field', {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
+      time_24hr: true,
+      allowInput: true
+    });
+  </script>
+</div>

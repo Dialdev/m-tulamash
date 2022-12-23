@@ -1,0 +1,129 @@
+<modification>
+	<id>Import XLS products Tool</id>
+	<version>5.2.2</version>
+	<vqmver>1.1.0</vqmver>
+	<author>David Nieves - info@opencartqualityextensions.com</author>
+
+	<file error="skip" name="admin/controller/common/menu.php">
+		<operation>
+			<search position="after"><![CDATA[$this->load->language('common/menu');]]></search>
+			<add><![CDATA[		
+				$this->load->language('tool/import_xls');
+
+				$data['text_buttom'] = $this->language->get('text_buttom');
+
+				$data['import'] = $this->url->link('tool/import_xls', 'token=' . $this->session->data['token'], 'SSL');
+
+			]]></add>
+		</operation>
+	</file>
+
+	<file error="skip" name="admin/controller/common/column_left.php">
+		<operation error="skip">
+			<search position="before"><![CDATA[$user = array();]]></search>
+			<add><![CDATA[
+				$this->load->language('tool/import_xls');
+
+				$system[] = array(
+					'name'	   => $this->language->get('text_buttom'),
+					'href'     => $this->url->link('tool/import_xls', 'token=' . $this->session->data['token'], 'SSL'),
+					'children' => array()		
+				);
+			]]></add>
+		</operation>
+	</file>
+
+	<file error="skip" name="admin/view/template/common/menu.tpl">
+		<operation>
+			<search position="after"><![CDATA[<li><a href="<?php echo $setting; ?>"><?php echo $text_setting; ?></a></li>]]></search>
+			<add><![CDATA[<li><a href="<?php echo $import; ?>"><?php echo $text_buttom; ?></a></li>]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/controller/common/filemanager.php">
+		<operation error="skip" info="from OC.2.0.0.0 to OC.2.2.0.0">
+			<search position="after"><![CDATA[move_uploaded_file($this->request->files['file']['tmp_name'], $directory . '/' . $filename);]]></search>
+			<add><![CDATA[
+		        $ext = strtolower(strrchr($this->request->files['file']['name'], '.'));
+		        $basename = basename($this->request->files['file']['name']);
+		        $target_file = "$directory/$basename";
+				
+				//OLD Function 
+			       	if ($ext == '.zip') {
+			          $extract = exec('unzip -o "'.$target_file.'" -d "'.$directory.'"');
+			          unlink($target_file);
+			        }
+			    //END OLD Function
+
+				/*
+				//PHP 5 >= 5.2.0, PECL zip >= 1.1.0
+					if ($ext == '.zip') {
+				        $zip = new ZipArchive;
+						$res = $zip->open($target_file);
+						if ($res === TRUE) {
+						  $zip->extractTo($directory);
+						  $zip->close();
+							unlink($target_file);
+						}
+					}
+				//END PHP 5 >= 5.2.0, PECL zip >= 1.1.0
+				*/
+			]]></add>
+		</operation>
+
+		<operation error="skip" info="more than OC.2.3.0.0">
+			<search position="before"><![CDATA[move_uploaded_file($file['tmp_name'], $directory . '/' . $filename);]]></search>
+			<add><![CDATA[
+		        $ext = strtolower(strrchr($file['name'], '.'));
+		        $basename = basename($file['name']);
+		        $target_file = "$directory/$basename";
+				
+				//OLD Function 
+			       	if ($ext == '.zip') {
+			          $extract = exec('unzip -o "'.$target_file.'" -d "'.$directory.'"');
+			          unlink($target_file);
+			        }
+			    //END OLD Function
+
+				/*
+				//PHP 5 >= 5.2.0, PECL zip >= 1.1.0
+					if ($ext == '.zip') {
+				        $zip = new ZipArchive;
+						$res = $zip->open($target_file);
+						if ($res === TRUE) {
+						  $zip->extractTo($directory);
+						  $zip->close();
+							unlink($target_file);
+						}
+					}
+				//END PHP 5 >= 5.2.0, PECL zip >= 1.1.0
+				*/
+			]]></add>
+		</operation>
+
+		<operation error="skip" info="from OC.2.0.0.0 to OC.2.2.0.0">
+			<search position="before"><![CDATA[if (!in_array($this->request->files['file']['type'], $allowed)) {]]></search>
+			<add><![CDATA[
+				$allowed[] = 'application/zip';
+				$allowed[] = 'application/x-zip-compressed';
+				$allowed[] = 'application/force-download';
+			]]></add>
+		</operation>
+
+		<operation error="skip" info="more than OC.2.3.0.0">
+			<search position="before"><![CDATA[if (!in_array($file['type'], $allowed)) {]]></search>
+			<add><![CDATA[
+				$allowed[] = 'application/zip';
+				$allowed[] = 'application/x-zip-compressed';
+				$allowed[] = 'application/force-download';
+			]]></add>
+		</operation>
+
+		<operation>
+			<search position="before"><![CDATA[if (!in_array(utf8_strtolower(utf8_substr(strrchr($filename, '.'), 1)), $allowed)) {]]></search>
+			<add><![CDATA[
+				$allowed[] = 'zip';
+			]]></add>
+		</operation>
+	</file>
+</modification>

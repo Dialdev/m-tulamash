@@ -1,0 +1,932 @@
+<!--
+##==================================================================##
+## @author    : OCdevWizard                                         ##
+## @contact   : ocdevwizard@gmail.com                               ##
+## @support   : http://help.ocdevwizard.com                         ##
+## @license   : http://license.ocdevwizard.com/Licensing_Policy.pdf ##
+## @copyright : (c) OCdevWizard. Smart Contact Us Pro, 2017         ##
+##==================================================================##
+-->
+<div class="modal-content" id="modal-form-constructor-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">{{ text_form }}</h4>
+  </div>
+  <div class="modal-body">
+    <div id="content" class="row" style="padding-bottom: 0;">
+      <div class="panel-body" style="padding-top: 0;padding-bottom: 0;">
+        <ul class="nav nav-tabs" id="modal-setting-tabs">
+          <li class="active dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cog"></i> {{ tab_control_panel }} <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#modal-general-block" data-toggle="tab"><i class="fa fa-cogs"></i> {{ tab_general_setting }}</a></li>
+              <li><a href="#modal-fields-block" data-toggle="tab"><i class="fa fa-bars"></i> {{ tab_fields_setting }}</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-language"></i> {{ tab_language_setting }} <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#modal-language-block" data-toggle="tab"><i class="fa fa-flag-o"></i> {{ tab_basic_language_setting }}</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form method="post" enctype="multipart/form-data" id="modal-form" class="form-horizontal">
+          <input type="hidden" style="display:none;" name="form_id" value="{{ form_id }}" />
+          <div class="tab-content">
+            <!-- TAB General block -->
+            <div class="tab-pane fade active in" role="tabpanel" id="modal-general-block">
+              <div class="form-group">
+                <label class="col-sm-3 control-label" for="input-status">{{ text_activate_module }}</label>
+                <div class="col-sm-9">
+                  <select name="status" id="input-status" class="form-control">
+                    {% if (status) %}
+                    <option value="1" selected="selected">{{ text_enabled }}</option>
+                    <option value="0">{{ text_disabled }}</option>
+                    {% else %}
+                    <option value="1">{{ text_enabled }}</option>
+                    <option value="0" selected="selected">{{ text_disabled }}</option>
+                    {% endif %}
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">{{ text_new_saved_record_admin_alert }}</label>
+                <div class="col-sm-9">
+                  <div class="btn-group btn-toggle" data-toggle="buttons">
+                    <label class="btn {{ new_saved_record_admin_alert == 1 ? 'active btn-success' : 'btn-default' }}">
+                      <input type="radio"
+                        name="new_saved_record_admin_alert"
+                        value="1"
+                        autocomplete="off"
+                        {{ new_saved_record_admin_alert == 1 ? 'checked="checked"' : '' }}
+                      />{{ text_yes }}
+                    </label>
+                    <label class="btn {{ new_saved_record_admin_alert == 0 ? 'active btn-success' : 'btn-default' }}">
+                      <input type="radio"
+                        name="new_saved_record_admin_alert"
+                        value="0"
+                        autocomplete="off"
+                        {{ new_saved_record_admin_alert == 0 ? 'checked="checked"' : '' }}
+                      />{{ text_no }}
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-3 control-label" for="input-email_for_notification">{{ text_email_for_notification }}</label>
+                <div class="col-sm-9">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                    <input value="{{ email_for_notification }}" type="text" name="email_for_notification" class="form-control" id="input-email_for_notification" />
+                  </div>
+                  <div class="modal-error-block" id="modal-error-email-for-notification"></div>
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> {{ text_email_for_notification_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">{{ text_email_template }}</label>
+                <div class="col-sm-9">
+                  <div class="btn-group-vertical btn-toggle" data-toggle="buttons">
+                    <label class="btn {{ allow_email_template == 1 ? 'active btn-success' : 'btn-default' }}{% if (not templates) %} disabled{% endif %}">
+                      <input type="radio"
+                        name="allow_email_template"
+                        value="1"
+                        autocomplete="off"
+                        {{ allow_email_template == 1 ? 'checked="checked"' : '' }}
+                      />{{ text_custom_html_template }}
+                    </label>
+                    <label class="btn {{ allow_email_template == 2 ? 'active btn-success' : 'btn-default' }}">
+                      <input type="radio"
+                        name="allow_email_template"
+                        value="2"
+                        autocomplete="off"
+                        {{ allow_email_template == 2 ? 'checked="checked"' : '' }}
+                      />{{ text_default_html_template }}
+                    </label>
+                  </div>
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> {{ text_email_template_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">{{ text_email_template_by_default }}</label>
+                <div class="col-sm-9">
+                  {% if (templates) %}
+                  {% set row_height = 55 %} {% set row = 0 %} {% for template in templates %}
+                  {% if (row < 5) %} {% set row_height = row_height*1.26 %} {% endif %} {% set row = row + 1 %}
+                  {% endfor %}
+                  <div class="well well-sm" style="height: {{ row_height }}px; overflow: auto;">
+                    {% for template in templates %}
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="email_template_by_default" value="{{ template['template_id'] }}" {{ email_template_by_default is defined and email_template_by_default == template['template_id'] ? 'checked' : '' }} /> {{ template['name'] }} <b><a style="cursor:pointer;" onclick="open_email_template({id: '{{ template['template_id'] }}'});">[{{ text_edit_template }}]</a></b>
+                      </label>
+                    </div>
+                    {% endfor %}
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-xs" onclick="$(this).parent().parent().find(':radio').attr('checked', false);">{{ text_unselect_all }}</button>
+                  </div>
+                  {% else %}
+                    <div class="well well-sm" style="height: 69.3px; overflow: auto;">
+                    {{ text_no_templates }}
+                    </div>
+                  {% endif %}
+                  <div class="alert alert-info" role="alert">{{ text_email_template_by_default_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-3 control-label">{{ text_stores }}</label>
+                <div class="col-sm-9">
+                  {% set row_height = 55 %} {% set row = 0 %} {% for store in all_stores %}
+                  {% if (row < 5) %} {% set row_height = row_height*1.26 %} {% endif %} {% set row = row + 1 %}
+                  {% endfor %}
+                  <div class="well well-sm" style="height: {{ row_height }}px; overflow: auto;">
+                    {% for store in all_stores %}
+                    <div class="checkbox">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="stores[]"
+                          value="{{ store['store_id'] }}" {{ stores is not empty and store['store_id'] in stores ? 'checked' : '' }}
+                        /> {{ store['name'] }}
+                      </label>
+                    </div>
+                    {% endfor %}
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-xs" onclick="$(this).parent().parent().find(':checkbox').trigger('click').attr('checked', true);">{{ text_select_all }}</button>
+                    <button type="button" class="btn btn-default btn-xs" onclick="$(this).parent().parent().find(':checkbox').attr('checked', false);">{{ text_unselect_all }}</button>
+                  </div>
+                  <div class="modal-error-block" id="modal-error-stores"></div>
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> {{ text_stores_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-3 control-label">{{ text_customer_groups }}</label>
+                <div class="col-sm-9">
+                  {% set row_height = 55 %} {% set row = 0 %} {% for customer_group in all_customer_groups %}
+                  {% if (row < 5) %} {% set row_height = row_height*1.26 %} {% endif %} {% set row = row + 1 %}
+                  {% endfor %}
+                  <div class="well well-sm" style="height: {{ row_height }}px; overflow: auto;">
+                    {% for customer_group in all_customer_groups %}
+                    <div class="checkbox">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="customer_groups[]"
+                          value="{{ customer_group['customer_group_id'] }}" {{ customer_groups is not empty and customer_group['customer_group_id'] in customer_groups ? 'checked' : '' }}
+                        /> {{ customer_group['name'] }}
+                      </label>
+                    </div>
+                    {% endfor %}
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-xs" onclick="$(this).parent().parent().find(':checkbox').trigger('click').attr('checked', true);">{{ text_select_all }}</button>
+                    <button type="button" class="btn btn-default btn-xs" onclick="$(this).parent().parent().find(':checkbox').attr('checked', false);">{{ text_unselect_all }}</button>
+                  </div>
+                  <div class="modal-error-block" id="modal-error-customer-groups"></div>
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> {{ text_customer_groups_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">{{ text_select_terms }}</label>
+                <div class="col-sm-9">
+                  <select name="require_information" class="form-control">
+                    <option value="">{{ text_no }}</option>
+                    {% for information in all_informations %}
+                      <option value="{{ information['information_id'] }}" {{ require_information is not empty and require_information == information['information_id'] ? 'selected' : '' }}>{{ information['title'] }}</option>
+                    {% endfor %}
+                  </select>
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_select_terms_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">{{ text_hide_info_message }}</label>
+                <div class="col-sm-9">
+                  <select name="hide_info_message" class="form-control">
+                    <option value="0" {{ hide_info_message == 0 ? 'selected="selected"' : '' }} >{{ text_no }}</option>
+                    <option value="1" {{ hide_info_message == 1 ? 'selected="selected"' : '' }} >{{ text_before_products_list }}</option>
+                    <option value="2" {{ hide_info_message == 2 ? 'selected="selected"' : '' }} >{{ text_after_products_list }}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">{{ text_display_type }}</label>
+                <div class="col-sm-9">
+                  <select name="display_type" class="form-control">
+                    {% if (display_type == 1) %}
+                      <option value="1" selected="selected">{{ text_in_popup }}</option>
+                      <option value="2">{{ text_in_static }}</option>
+                      <option value="3">{{ text_in_sidebar }}</option>
+                    {% elseif (display_type == 2) %}
+                      <option value="1">{{ text_in_popup }}</option>
+                      <option value="2" selected="selected">{{ text_in_static }}</option>
+                      <option value="3">{{ text_in_sidebar }}</option>
+                    {% else %}
+                      <option value="1">{{ text_in_popup }}</option>
+                      <option value="2">{{ text_in_static }}</option>
+                      <option value="3" selected="selected">{{ text_in_sidebar }}</option>
+                    {% endif %}
+                  </select>
+                  <div class="alert alert-info display-type-1" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_in_popup_faq }}</div>
+                  <div class="alert alert-info display-type-2" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_in_static_faq }}</div>
+                  <div class="alert alert-info display-type-3" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_in_sidebar_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group display-type-1">
+                <label class="col-sm-3 control-label">{{ text_popup_button_type }}</label>
+                <div class="col-sm-9">
+                  <select name="popup_button_type" class="form-control">
+                    {% if (popup_button_type == 1) %}
+                      <option value="1" selected="selected">{{ text_static_button }}</option>
+                      <option value="2">{{ text_float_button }}</option>
+                    {% else %}
+                      <option value="1">{{ text_static_button }}</option>
+                      <option value="2" selected="selected">{{ text_float_button }}</option>
+                    {% endif %}
+                  </select>
+                </div>
+              </div>
+              <div class="form-group required display-type-1 popup-button-type-1">
+                <label class="col-sm-3 control-label" for="input-add_id_selector">{{ text_add_id_selector }}</label>
+                <div class="col-sm-9">
+                  <div class="input-group">
+                    <span class="input-group-addon">{{ text_css_id_indicator }}</span>
+                    <input value="{{ add_id_selector }}" type="text" name="add_id_selector" class="form-control" placeholder="{{ text_add_id_selector_ph }}"/>
+                  </div>
+                  <div class="modal-error-block" id="modal-error-add-id-selector"></div>
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_add_id_selector_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group display-type-1 popup-button-type-1">
+                <label class="col-sm-3 control-label" for="input-button_class">{{ text_button_class }}</label>
+                <div class="col-sm-9">
+                  <div class="input-group">
+                    <span class="input-group-addon">{{ text_css_class_indicator }}</span>
+                    <input value="{{ button_class }}" type="text" name="button_class" class="form-control" placeholder="{{ text_button_class_ph }}"/>
+                  </div>
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_button_class_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group required display-type-1 popup-button-type-2">
+                <label class="col-sm-3 control-label" for="input-float_button_id_selector">{{ text_float_button_id_selector }}</label>
+                <div class="col-sm-9">
+                  <div class="input-group">
+                    <span class="input-group-addon">{{ text_css_id_indicator }}</span>
+                    <input value="{{ float_button_id_selector }}" type="text" name="float_button_id_selector" class="form-control" readonly/>
+                  </div>
+                  <div class="modal-error-block" id="modal-error-float-button-id-selector"></div>
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_float_button_id_selector_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group display-type-3">
+                <label class="col-sm-3 control-label">{{ text_sidebar_type }}</label>
+                <div class="col-sm-9">
+                  <select name="sidebar_type" class="form-control">
+                    {% if (sidebar_type == 1) %}
+                      <option value="1" selected="selected">{{ text_sidebar_left_side }}</option>
+                      <option value="2">{{ text_sidebar_right_side }}</option>
+                    {% else %}
+                      <option value="1">{{ text_sidebar_left_side }}</option>
+                      <option value="2" selected="selected">{{ text_sidebar_right_side }}</option>
+                    {% endif %}
+                  </select>
+                </div>
+              </div>
+              <div class="form-group required display-type-3">
+                <label class="col-sm-3 control-label" for="input-sidebar_button_id_selector">{{ text_sidebar_button_id_selector }}</label>
+                <div class="col-sm-9">
+                  <div class="input-group">
+                    <span class="input-group-addon">{{ text_css_id_indicator }}</span>
+                    <input value="{{ sidebar_button_id_selector }}" type="text" name="sidebar_button_id_selector" class="form-control" readonly/>
+                  </div>
+                  <div class="modal-error-block" id="modal-error-sidebar-button-id-selector"></div>
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_sidebar_button_id_selector_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group display-type-1 popup-button-type-1">
+                <label class="col-sm-3 control-label">{{ text_location }}</label>
+                <div class="col-sm-9">
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-success {{ location == 1 ? 'active' : '' }}">
+                      <input type="radio"
+                        name="location"
+                        value="1"
+                        autocomplete="off"
+                        {{ location == 1 ? 'checked="checked"' : '' }}
+                      />{{ text_outside_before }}
+                    </label>
+                    <label class="btn btn-success {{ location == 2 ? 'active' : '' }}">
+                      <input type="radio"
+                        name="location"
+                        value="2"
+                        autocomplete="off"
+                        {{ location == 2 ? 'checked="checked"' : '' }}
+                      />{{ text_inside_left }}
+                    </label>
+                    <label class="btn btn-success {{ location == 3 ? 'active' : '' }}">
+                      <input type="radio"
+                        name="location"
+                        value="3"
+                        autocomplete="off"
+                        {{ location == 3 ? 'checked="checked"' : '' }}
+                      />{{ text_inside_right }}
+                    </label>
+                    <label class="btn btn-success {{ location == 4 ? 'active' : '' }}">
+                      <input type="radio"
+                        name="location"
+                        value="4"
+                        autocomplete="off"
+                        {{ location == 4 ? 'checked="checked"' : '' }}
+                      />{{ text_outside_after }}
+                    </label>
+                  </div>
+                  <div class="modal-error-block" id="modal-error-location"></div>
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_location_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group display-type-2">
+                <label class="col-sm-3 control-label">{{ text_static_position }}</label>
+                <div class="col-sm-9">
+                  <select name="position" class="form-control">
+                    {% if (position == 'column_left') %}
+                      <option value="column_left" selected="selected">{{ text_static_position_1 }}</option>
+                      <option value="column_right">{{ text_static_position_2 }}</option>
+                      <option value="content_top">{{ text_static_position_3 }}</option>
+                      <option value="content_bottom">{{ text_static_position_4 }}</option>
+                    {% elseif (position == 'column_right') %}
+                      <option value="column_left">{{ text_static_position_1 }}</option>
+                      <option value="column_right" selected="selected">{{ text_static_position_2 }}</option>
+                      <option value="content_top">{{ text_static_position_3 }}</option>
+                      <option value="content_bottom">{{ text_static_position_4 }}</option>
+                    {% elseif (position == 'content_top') %}
+                      <option value="column_left">{{ text_static_position_1 }}</option>
+                      <option value="column_right">{{ text_static_position_2 }}</option>
+                      <option value="content_top" selected="selected">{{ text_static_position_3 }}</option>
+                      <option value="content_bottom">{{ text_static_position_4 }}</option>
+                    {% else %}
+                      <option value="column_left">{{ text_static_position_1 }}</option>
+                      <option value="column_right">{{ text_static_position_2 }}</option>
+                      <option value="content_top">{{ text_static_position_3 }}</option>
+                      <option value="content_bottom" selected="selected">{{ text_static_position_4 }}</option>
+                    {% endif %}
+                  </select>
+                  <div class="modal-error-block" id="modal-error-position"></div>
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_static_position_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group display-type-2">
+                <label class="col-sm-3 control-label" for="input-sort_order">{{ text_static_sort_order }}</label>
+                <div class="col-sm-9">
+                  <input value="{{ sort_order }}" type="text" name="sort_order" class="form-control" />
+                  <div class="modal-error-block" id="modal-error-sort-order"></div>
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_static_sort_order_faq }}</div>
+                </div>
+              </div>
+            </div>
+            <!-- TAB Fields block -->
+            <div class="tab-pane fade" role="tabpanel" id="modal-fields-block">
+              <div class="row">
+                <div class="col-sm-3">
+                  <ul class="nav nav-pills nav-stacked" id="fields-li">
+                    {% set field_row = 1 %}
+                    {% for field in field_data %}
+                    <li class="no_field_title">
+                      <input type="hidden" style="display:none;" name="field_data[{{ field_row }}][sort_order]" />
+                      <input type="hidden" style="display:none;" name="field_data[{{ field_row }}][name]" value="field_{{ field_row }}" />
+                      <a href="#tab-field{{ field_row }}" data-toggle="tab"><i class="fa fa-minus-circle" onclick="$('a[href=\'#tab-field{{ field_row }}\']').parent().remove(); $('#tab-field{{ field_row }}').remove(); $('#fields-li a:first').tab('show');"></i> {{ text_tab_field }} {{ '№'~ field_row }}
+                      <span class="field_title">({{ field['title'][default_language_id] is defined ? field['title'][default_language_id] : '' }})</span>
+                      </a>
+                    </li>
+                    {% set field_row = field_row + 1 %}
+                    {% endfor %}
+                    <li id="field-add">
+                      <button type="button" onclick="addField();" class="btn btn-success" style="width: 100%;"><i class="fa fa-plus-circle"></i> {{ button_add_field }}</button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-9">
+                  <div class="tab-content">
+                    {% set field_row = 1 %}
+                    {% for field in field_data %}
+                      <div class="tab-pane" id="tab-field{{ field_row }}">
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label" for="input-activate{{ field_row }}">{{ text_activate_field }}</label>
+                          <div class="col-sm-9">
+                            <select name="field_data[{{ field_row }}][activate]" class="form-control" id="input-activate{{ field_row }}">
+                              {% if (field['activate'] == 1) %}
+                                <option value="1" selected="selected">{{ text_yes }}</option>
+                                <option value="0">{{ text_no }}</option>
+                              {% else %}
+                                <option value="1">{{ text_yes }}</option>
+                                <option value="0" selected="selected">{{ text_no }}</option>
+                              {% endif %}
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group required">
+                          <label class="col-sm-3 control-label" for="input-title{{ field_row }}">{{ text_heading_field }}</label>
+                          <div class="col-sm-9">
+                            {% for language in languages %}
+                            <div class="input-group" style="margin-bottom: 5px;">
+                              <span class="input-group-addon"><img src="{{ language['image'] }}" title="{{ language['name'] }}" /></span>
+                              <input type="text" name="field_data[{{ field_row }}][title][{{ language['language_id'] }}]" value="{{ field['title'][language['language_id']] is defined ? field['title'][language['language_id']] : '' }}" class="form-control" id="input-title{{ field_row }}" />
+                            </div>
+                            <div class="modal-error-block" id="modal-error-field-data-language-{{ field_row }}-title-{{ language['language_id'] }}"></div>
+                            {% endfor %}
+                          </div>
+                        </div>
+                        <div class="form-group required">
+                          <label class="col-sm-3 control-label" for="input-view{{ field_row }}">{{ text_assign_functionality }}</label>
+                          <div class="col-sm-9">
+                            <select name="field_data[{{ field_row }}][view]" class="form-control" id="input-view{{ field_row }}">
+                              <option value="0">{{ text_make_a_choice }}</option>
+                              {% for key,view in field_view_data %}
+                              {% if (key == 'file') %}
+                              <option value="{{ key }}" disabled="disabled">{{ view }}</option>
+                              {% else %}
+                              <option value="{{ key }}" {{ field['view'] == key ? 'selected="selected"' : '' }}>{{ view }}</option>
+                              {% endif %}
+                              {% endfor %}
+                            </select>
+                            <div class="row" style="display:block;margin-top:15px">
+                              <div class="col-sm-12">
+                                {% for language in languages %}
+                                <div class="input-group" style="margin-bottom: 5px;">
+                                  <span class="input-group-addon"><img src="{{ language['image'] }}" title="{{ language['name'] }}" /></span>
+                                  <input type="text" name="field_data[{{ field_row }}][view_fields][{{ language['language_id'] }}]" value="{{ field['view_fields'][language['language_id']] is defined ? field['view_fields'][language['language_id']] : '' }}" class="form-control" />
+                                </div>
+                                {% endfor %}
+                                <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_assign_functionality_faq }}</div>
+                              </div>
+                            </div>
+                            <div class="modal-error-block" id="modal-error-field-data-{{ field_row }}-view"></div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label" for="input-check{{ field_row }}">{{ text_check_type }}</label>
+                          <div class="col-sm-9">
+                            <select name="field_data[{{ field_row }}][check]" class="form-control" id="input-check{{ field_row }}">
+                              <option value="0" {{ field['check'] == 0 ? 'selected="selected"' : '' }} >{{ text_validation_type_1 }}</option>
+                              <option value="1" {{ field['check'] == 1 ? 'selected="selected"' : '' }} >{{ text_validation_type_2 }}</option>
+                              <option value="2" {{ field['check'] == 2 ? 'selected="selected"' : '' }} >{{ text_validation_type_3 }}</option>
+                              <option value="3" {{ field['check'] == 3 ? 'selected="selected"' : '' }} >{{ text_validation_type_4 }}</option>
+                            </select>
+                            <div class="input-group" style="display:table;margin-top:15px;">
+                              <span class="input-group-addon"><i class="fa fa-filter"></i></span>
+                              <input type="text" placeholder="{{ text_validation_type_3_ph }}" name="field_data[{{ field_row }}][check_rule]" value="{{ field['check_rule'] }}" class="form-control" />
+                            </div>
+                            <div class="input-group" style="display:table;margin-top:15px;">
+                              <span class="input-group-addon"><i class="fa fa-chevron-right"></i></span>
+                              <input type="text" placeholder="{{ text_validation_type_4_1_ph }}" name="field_data[{{ field_row }}][check_min]" value="{{ field['check_min'] }}" class="form-control" />
+                            </div>
+                            <div class="input-group" style="display:table;margin-top:15px;">
+                              <span class="input-group-addon"><i class="fa fa-chevron-left"></i></span>
+                              <input type="text" placeholder="{{ text_validation_type_4_2_ph }}" name="field_data[{{ field_row }}][check_max]" value="{{ field['check_max'] }}" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label" for="input-mask{{ field_row }}">{{ text_mask }}</label>
+                          <div class="col-sm-9">
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
+                              <input value="{{ field['mask'] }}" type="text" name="field_data[{{ field_row }}][mask]" class="form-control" placeholder="{{ text_mask_ph }}" id="input-mask{{ field_row }}" />
+                            </div>
+                            <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_mask_faq }}</div>
+                          </div>
+                        </div>
+                        <div class="form-group required">
+                          <label class="col-sm-3 control-label" for="input-error_text{{ field_row }}">{{ text_error_text }}</label>
+                          <div class="col-sm-9">
+                            {% for language in languages %}
+                            <div class="input-group" style="margin-bottom: 5px;">
+                              <span class="input-group-addon"><img src="{{ language['image'] }}" title="{{ language['name'] }}" /></span>
+                              <input type="text" name="field_data[{{ field_row }}][error_text][{{ language['language_id'] }}]" value="{{ field['error_text'][language['language_id']] is defined ? field['error_text'][language['language_id']] : '' }}" class="form-control" id="input-error_text{{ field_row }}" />
+                            </div>
+                            <div class="modal-error-block" id="modal-error-field-data-language-{{ field_row }}-error-text-{{ language['language_id'] }}"></div>
+                            {% endfor %}
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label" for="input-css_id{{ field_row }}">{{ text_css_id }}</label>
+                          <div class="col-sm-9">
+                            <div class="input-group">
+                              <span class="input-group-addon">{{ text_css_id_indicator }}</span>
+                              <input value="{{ field['css_id'] }}" type="text" name="field_data[{{ field_row }}][css_id]" class="form-control" placeholder="{{ text_css_id_ph }}" id="input-css_id{{ field_row }}" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label" for="input-css_class{{ field_row }}">{{ text_css_class }}</label>
+                          <div class="col-sm-9">
+                            <div class="input-group">
+                              <span class="input-group-addon">{{ text_css_class_indicator }}</span>
+                              <input value="{{ field['css_class'] }}" type="text" name="field_data[{{ field_row }}][css_class]" class="form-control" placeholder="{{ text_css_class_ph }}" id="input-css_class{{ field_row }}" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group position-field">
+                          <label class="col-sm-3 control-label">{{ text_position }}</label>
+                          <div class="col-sm-9">
+                            <div class="btn-group" data-toggle="buttons">
+                              <label class="btn btn-success {{ field['position'] == 1 ? 'active' : '' }}">
+                                <input type="radio"
+                                  name="field_data[{{ field_row }}][position]"
+                                  value="1"
+                                  autocomplete="off"
+                                  {{ field['position'] == 1 ? 'checked="checked"' : '' }}
+                                />{{ text_left_side }}
+                              </label>
+                              <label class="btn btn-success {{ field['position'] == 3 ? 'active' : '' }}">
+                                <input type="radio"
+                                  name="field_data[{{ field_row }}][position]"
+                                  value="3"
+                                  autocomplete="off"
+                                  {{ field['position'] == 3 ? 'checked="checked"' : '' }}
+                                />{{ text_center }}
+                              </label>
+                              <label class="btn btn-success {{ field['position'] == 2 ? 'active' : '' }}">
+                                <input type="radio"
+                                  name="field_data[{{ field_row }}][position]"
+                                  value="2"
+                                  autocomplete="off"
+                                  {{ field['position'] == 2 ? 'checked="checked"' : '' }}
+                                />{{ text_right_side }}
+                              </label>
+                            </div>
+                            <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_position_faq }}</div>
+                          </div>
+                        </div>
+                      </div>
+                    {% set field_row = field_row + 1 %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- TAB Language block -->
+            <div class="tab-pane fade" role="tabpanel" id="modal-language-block">
+              <div class="form-group required">
+                <label class="col-sm-3 control-label">{{ text_module_heading }}</label>
+                <div class="col-sm-9">
+                  {% for language in languages %}
+                  <div class="input-group" style="margin-bottom: 5px;">
+                    <span class="input-group-addon"><img src="{{ language['image'] }}" title="{{ language['name'] }}" /></span>
+                    <input type="text" name="form_description[{{ language['language_id'] }}][heading]" value="{{ form_description[language['language_id']] is defined ? form_description[language['language_id']]['heading'] : '' }}" class="form-control" />
+                  </div>
+                  <div class="modal-error-block" id="modal-error-form-description-language-heading-{{ language['language_id'] }}"></div>
+                  {% endfor %}
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> {{ text_module_heading_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-3 control-label">{{ text_module_call_button }}</label>
+                <div class="col-sm-9">
+                  {% for language in languages %}
+                  <div class="input-group" style="margin-bottom: 5px;">
+                    <span class="input-group-addon"><img src="{{ language['image'] }}" title="{{ language['name'] }}" /></span>
+                    <input type="text" name="form_description[{{ language['language_id'] }}][call_button]" value="{{ form_description[language['language_id']] is defined ? form_description[language['language_id']]['call_button'] : '' }}" class="form-control" />
+                  </div>
+                  <div class="modal-error-block" id="modal-error-form-description-language-call-button-{{ language['language_id'] }}"></div>
+                  {% endfor %}
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> {{ text_module_call_button_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-3 control-label">{{ text_module_save_button }}</label>
+                <div class="col-sm-9">
+                  {% for language in languages %}
+                  <div class="input-group" style="margin-bottom: 5px;">
+                    <span class="input-group-addon"><img src="{{ language['image'] }}" title="{{ language['name'] }}" /></span>
+                    <input type="text" name="form_description[{{ language['language_id'] }}][save_button]" value="{{ form_description[language['language_id']] is defined ? form_description[language['language_id']]['save_button'] : '' }}" class="form-control" />
+                  </div>
+                  <div class="modal-error-block" id="modal-error-form-description-language-save-button-{{ language['language_id'] }}"></div>
+                  {% endfor %}
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> {{ text_module_save_button_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-3 control-label">{{ text_module_close_button }}</label>
+                <div class="col-sm-9">
+                  {% for language in languages %}
+                  <div class="input-group" style="margin-bottom: 5px;">
+                    <span class="input-group-addon"><img src="{{ language['image'] }}" title="{{ language['name'] }}" /></span>
+                    <input type="text" name="form_description[{{ language['language_id'] }}][close_button]" value="{{ form_description[language['language_id']] is defined ? form_description[language['language_id']]['close_button'] : '' }}" class="form-control" />
+                  </div>
+                  <div class="modal-error-block" id="modal-error-form-description-language-close-button-{{ language['language_id'] }}"></div>
+                  {% endfor %}
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> {{ text_module_close_button_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-3 control-label">{{ text_success_message }}</label>
+                <div class="col-sm-9">
+                  {% for language in languages %}
+                  <div class="input-group" style="margin-bottom: 5px;">
+                    <span class="input-group-addon"><img src="{{ language['image'] }}" title="{{ language['name'] }}" /></span>
+                    <textarea name="form_description[{{ language['language_id'] }}][success_message]" id="success_message{{ language['language_id'] }}" class="form-control">{{ form_description[language['language_id']] is defined ? form_description[language['language_id']]['success_message'] : '' }}</textarea>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-xs" onclick="texteditor_action({id: '#success_message{{ language['language_id'] }}'});">{{ text_open_texteditor }}</button>
+                    <button type="button" class="btn btn-default btn-xs" onclick="texteditor_action({id: '#success_message{{ language['language_id'] }}', start: false, destroy: true});" style="display: none;">{{ text_save_texteditor }}</button>
+                  </div>
+                  <div class="modal-error-block" id="modal-error-form-description-language-success-message-{{ language['language_id'] }}"></div>
+                  {% endfor %}
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> {{ text_success_message_faq }}</div>
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-3 control-label">{{ text_info_message }}</label>
+                <div class="col-sm-9">
+                  {% for language in languages %}
+                  <div class="input-group" style="margin-bottom: 5px;">
+                    <span class="input-group-addon"><img src="{{ language['image'] }}" title="{{ language['name'] }}" /></span>
+                    <textarea name="form_description[{{ language['language_id'] }}][info_message]" id="info_message{{ language['language_id'] }}" class="form-control">{{ form_description[language['language_id']] is defined ? form_description[language['language_id']]['info_message'] : '' }}</textarea>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-xs" onclick="texteditor_action({id: '#info_message{{ language['language_id'] }}'});">{{ text_open_texteditor }}</button>
+                    <button type="button" class="btn btn-default btn-xs" onclick="texteditor_action({id: '#info_message{{ language['language_id'] }}', start: false, destroy: true});" style="display: none;">{{ text_save_texteditor }}</button>
+                  </div>
+                  <div class="modal-error-block" id="modal-error-form-description-language-info-message-{{ language['language_id'] }}"></div>
+                  {% endfor %}
+                  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> {{ text_info_message_faq }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-info" onclick="submit_form(this, {% if (form_id) %}'edit'{% else %}'add'{% endif %});">{{ button_submit }}</button>
+    <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close" {% if (not form_id) %}style="display: none;"{% endif %}>{{ button_close }}</button>
+  </div>
+</div>
+<script type="text/javascript"><!--
+var field_row = {{ field_row }};
+
+function addField() {
+  html  = '<div class="tab-pane" id="tab-field' + field_row + '">';
+  html += '   <input type="hidden" style="display:none;" name="field_data[' + field_row + '][sort_order]" />';
+  html += '   <input type="hidden" style="display:none;" name="field_data[' + field_row + '][name]" value="field_' + field_row + '" />';
+  html += '   <div class="form-group">';
+  html += '     <label class="col-sm-3 control-label" for="input-activate' + field_row + '">{{ text_activate_field }}</label>';
+  html += '     <div class="col-sm-9">';
+  html += '       <select name="field_data[' + field_row + '][activate]" class="form-control" id="input-activate' + field_row + '">';
+  html += '         <option value="1">{{ text_yes }}</option><option value="0" selected="selected">{{ text_no }}</option>';
+  html += '       </select>';
+  html += '     </div>';
+  html += '   </div>';
+  html += '   <div class="form-group required">';
+  html += '     <label class="col-sm-3 control-label" for="input-title' + field_row + '">{{ text_heading_field }}</label>';
+  html += '     <div class="col-sm-9">';
+                {% for language in languages %}
+  html += '       <div class="input-group" style="margin-bottom: 5px;">';
+  html += '         <span class="input-group-addon"><img src="{{ language['image'] }}" title="{{ language['name'] }}" /></span>';
+  html += '         <input type="text" name="field_data[' + field_row + '][title][{{ language['language_id'] }}]" value="" class="form-control" id="input-title' + field_row + '" />';
+  html += '       </div>';
+  html += '       <div class="modal-error-block" id="modal-error-field-data-language-' + field_row + '-title-{{ language['language_id'] }}"></div>';
+                {% endfor %}
+  html += '     </div>';
+  html += '   </div>';
+  html += '   <div class="form-group required">';
+  html += '     <label class="col-sm-3 control-label" for="input-view' + field_row + '">{{ text_assign_functionality }}</label>';
+  html += '     <div class="col-sm-9">';
+  html += '       <select name="field_data[' + field_row + '][view]" class="form-control" id="input-view' + field_row + '">';
+  html += '         <option value="0">{{ text_make_a_choice }}</option>';
+                    {% for key,view in field_view_data %}
+                      {% if (key == 'file') %}
+  html += '             <option value="{{ key }}" disabled="disabled">{{ view }}</option>';
+                      {% else %}
+  html += '             <option value="{{ key }}">{{ view }}</option>';
+                      {% endif %}
+                    {% endfor %}
+  html += '       </select>';
+  html += '       <div class="row" style="display:none;margin-top:15px;">';
+  html += '         <div class="col-sm-12">';
+                      {% for language in languages %}
+  html += '             <div class="input-group" style="margin-bottom: 5px;">';
+  html += '               <span class="input-group-addon"><img src="{{ language['image'] }}" title="{{ language['name'] }}" /></span>';
+  html += '               <input type="text" name="field_data[' + field_row + '][view_fields][{{ language['language_id'] }}]" value="" class="form-control" />';
+  html += '             </div>';
+                      {% endfor %}
+  html += '           <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i> {{ text_assign_functionality_faq }}</div>';
+  html += '         </div>';
+  html += '       </div>';
+  html += '       <div class="modal-error-block" id="modal-error-field-data-' + field_row + '-view"></div>';
+  html += '     </div>';
+  html += '   </div>';
+  html += '   <div class="form-group">';
+  html += '     <label class="col-sm-3 control-label" for="input-check' + field_row + '">{{ text_check_type }}</label>';
+  html += '     <div class="col-sm-9">';
+  html += '       <select name="field_data[' + field_row + '][check]" class="form-control" id="input-check' + field_row + '">';
+  html += '         <option value="0">{{ text_validation_type_1 }}</option>';
+  html += '         <option value="1">{{ text_validation_type_2 }}</option>';
+  html += '         <option value="2">{{ text_validation_type_3 }}</option>';
+  html += '         <option value="3">{{ text_validation_type_4 }}</option>';
+  html += '       </select>';
+  html += '       <div class="input-group" style="display:none;margin-top:15px;">';
+  html += '         <span class="input-group-addon"><i class="fa fa-filter"></i></span>';
+  html += '         <input type="text" placeholder="" name="field_data[' + field_row + '][check_rule]" value="" class="form-control" />';
+  html += '       </div>';
+  html += '       <div class="input-group" style="display:none;margin-top:15px;">';
+  html += '         <span class="input-group-addon"><i class="fa fa-chevron-right"></i></span>';
+  html += '         <input type="text" placeholder="{{ text_validation_type_4_1_ph }}" name="field_data[' + field_row + '][check_min]" value="" class="form-control" />';
+  html += '       </div>';
+  html += '       <div class="input-group" style="display:none;margin-top:15px;">';
+  html += '         <span class="input-group-addon"><i class="fa fa-chevron-left"></i></span>';
+  html += '         <input type="text" placeholder="{{ text_validation_type_4_2_ph }}" name="field_data[' + field_row + '][check_max]" value="" class="form-control" />';
+  html += '       </div>';
+  html += '     </div>';
+  html += '   </div>';
+  html += '   <div class="form-group">';
+  html += '     <label class="col-sm-3 control-label" for="input-mask' + field_row + '">{{ text_mask }}</label>';
+  html += '     <div class="col-sm-9">';
+  html += '       <div class="input-group">';
+  html += '         <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>';
+  html += '         <input value="" type="text" name="field_data[' + field_row + '][mask]" class="form-control" placeholder="{{ text_mask_ph }}" id="input-mask' + field_row + '" />';
+  html += '       </div>';
+  html += '     </div>';
+  html += '   </div>';
+  html += '   <div class="form-group required">';
+  html += '     <label class="col-sm-3 control-label" for="input-error_text' + field_row + '">{{ text_error_text }}</label>';
+  html += '     <div class="col-sm-9">';
+                {% for language in languages %}
+  html += '       <div class="input-group" style="margin-bottom: 5px;">';
+  html += '         <span class="input-group-addon"><img src="{{ language['image'] }}" title="{{ language['name'] }}" /></span>';
+  html += '         <input type="text" name="field_data[' + field_row + '][error_text][{{ language['language_id'] }}]" value="{{ error_for_all_field }}" class="form-control" id="input-error_text' + field_row + '" />';
+  html += '       </div>';
+  html += '       <div class="modal-error-block" id="modal-error-field-data-language-' + field_row + '-error-text-{{ language['language_id'] }}"></div>';
+                {% endfor %}
+  html += '     </div>';
+  html += '   </div>';
+  html += '   <div class="form-group">';
+  html += '     <label class="col-sm-3 control-label" for="input-css_id' + field_row + '">{{ text_css_id }}</label>';
+  html += '     <div class="col-sm-9">';
+  html += '       <div class="input-group">';
+  html += '         <span class="input-group-addon">{{ text_css_id_indicator }}</span>';
+  html += '         <input value="" type="text" name="field_data[' + field_row + '][css_id]" class="form-control" placeholder="{{ text_css_id_ph }}" id="input-css_id' + field_row + '" />';
+  html += '       </div>';
+  html += '     </div>';
+  html += '   </div>';
+  html += '   <div class="form-group">';
+  html += '     <label class="col-sm-3 control-label" for="input-css_class' + field_row + '">{{ text_css_class }}</label>';
+  html += '     <div class="col-sm-9">';
+  html += '       <div class="input-group">';
+  html += '         <span class="input-group-addon">{{ text_css_class_indicator }}</span>';
+  html += '         <input value="" type="text" name="field_data[' + field_row + '][css_class]" class="form-control" placeholder="{{ text_css_class_ph }}" id="input-css_class' + field_row + '" />';
+  html += '       </div>';
+  html += '     </div>';
+  html += '   </div>';
+  html += '   <div class="form-group position-field">';
+  html += '     <label class="col-sm-3 control-label">{{ text_position }}</label>';
+  html += '     <div class="col-sm-9">';
+  html += '       <div class="btn-group" data-toggle="buttons">';
+  html += '         <label class="btn btn-success">';
+  html += '           <input type="radio" name="field_data[' + field_row + '][position]" value="1" autocomplete="off" />{{ text_left_side }}';
+  html += '         </label>';
+  html += '         <label class="btn btn-success active">';
+  html += '           <input type="radio" name="field_data[' + field_row + '][position]" value="3" autocomplete="off" checked="checked" />{{ text_center }}';
+  html += '         </label>';
+  html += '         <label class="btn btn-success">';
+  html += '           <input type="radio" name="field_data[' + field_row + '][position]" value="2" autocomplete="off" />{{ text_right_side }}';
+  html += '         </label>';
+  html += '       </div>';
+  html += '     </div>';
+  html += '   </div>';
+
+  $('#modal-fields-block .tab-content:first-child').append(html);
+
+  $('#field-add').before('<li class="no_field_title"><a href="#tab-field' + field_row + '" data-toggle="tab"><i class="fa fa-minus-circle" onclick="$(\'a[href=\\\'#tab-field' + field_row + '\\\']\').parent().remove(); $(\'#tab-field' + field_row + '\').remove(); $(\'#fields-li a:first\').tab(\'show\');"></i> {{ text_tab_field }} №' + field_row + '</a></li>');
+  $('#fields-li a[href=\'#tab-field' + field_row + '\']').tab('show');
+
+  $('select[name*=check]').change(function() {
+    var val = $(this).val();
+    if (val == 2) {
+      $(this).next().show();
+      $(this).next().next().hide();
+      $(this).next().next().next().hide();
+    } else if(val == 3) {
+      $(this).next().hide();
+      $(this).next().next().show();
+      $(this).next().next().next().show();
+    } else {
+      $(this).next().hide();
+      $(this).next().next().hide();
+      $(this).next().next().next().hide();
+    }
+  });
+
+  if ($('select[name=display_type]').val() != "1") {
+    $('.position-field').hide();
+  }
+
+  $('select[name*=view]').change(function() {
+    var val = $(this).val();
+
+    if (val == "radio" || val == "checkbox" || val == "select") {
+      $(this).next().show();
+    } else {
+      $(this).next().hide();
+    }
+  });
+
+  field_row++;
+}
+
+$('select[name*=check]').change(function() {
+  var val = $(this).val();
+
+   if (val == 2) {
+    $(this).next().show();
+    $(this).next().next().hide();
+    $(this).next().next().next().hide();
+   } else if(val == 3) {
+    $(this).next().hide();
+    $(this).next().next().show();
+    $(this).next().next().next().show();
+   } else {
+    $(this).next().hide();
+    $(this).next().next().hide();
+    $(this).next().next().next().hide();
+   }
+});
+
+$('select[name*=view]').change(function() {
+  var val = $(this).val();
+
+  if (val == "radio" || val == "checkbox" || val == "select") {
+    $(this).next().show();
+  } else {
+    $(this).next().hide();
+  }
+});
+
+$('select[name*=check]').trigger('change');
+$('select[name*=view]').trigger('change');
+
+
+$('select[name=display_type]').change(function() {
+  var val = $(this).val();
+
+  if (val == 1) {
+    $('.display-type-1').show();
+    $('.display-type-2').hide();
+    $('.display-type-3').hide();
+    $('.position-field').show();
+  } else if(val == 2) {
+    $('.display-type-1').hide();
+    $('.display-type-2').show();
+    $('.display-type-3').hide();
+    $('.position-field').hide();
+  } else if(val == 3) {
+    $('.display-type-1').hide();
+    $('.display-type-2').hide();
+    $('.display-type-3').show();
+    $('.position-field').hide();
+  }
+
+  $('select[name=popup_button_type]').trigger('change');
+});
+
+$('select[name=popup_button_type]').change(function() {
+  var val = $(this).val();
+  var val_display_type = $('select[name=display_type]').val();
+
+  if (val == 1 && val_display_type == 1) {
+    $('.popup-button-type-1').show();
+    $('.popup-button-type-2').hide();
+  } else if(val == 2 && val_display_type == 1) {
+    $('.popup-button-type-1').hide();
+    $('.popup-button-type-2').show();
+  }
+});
+
+$('#fields-li li:first-child a').tab('show');
+
+$('#modal-fields-block .nav-pills').sortable({
+  forcePlaceholderSize: true,
+  items: '> li:not(#field-add)',
+  cursor: "move",
+  axis: "y",
+  placeholder: 'tab-placeholder',
+});
+
+$('select[name=display_type]').trigger('change');
+//--></script>
+<!-- start: code for module usability -->
+<script type="text/javascript">
+if ($('#modal-form-constructor-content .pro-block').length) {
+  $('#modal-form-constructor-content .pro-block').each(function(index) {
+    $(this).find('.control-label').append('<div class="clear"></div><div class="label label-info" style="text-transform: uppercase;">{{ text_available_in_pro_version }}</div>');
+    $(this).find('input[type=\'radio\'], input[type=\'checkbox\'], select, button').attr('disabled', true);
+    $(this).find('input[type=\'text\'], textarea').on('focus', function(){ alert('{{ text_available_in_pro_version }}'); });
+    $(this).find('label').addClass('disabled');
+    $(this).addClass('pro-version-only');
+  });
+}
+</script>
+<!-- end: code for module usability -->
+</div>

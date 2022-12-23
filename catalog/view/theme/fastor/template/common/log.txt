@@ -1,0 +1,3009 @@
+2021-07-30 09:50:16 Array
+(
+    [0] => <div class="fullwidth" id="camera_1">
+	<div class="camera_slider">
+		<div class="spinner"></div>
+		<div class="camera_wrap" id="camera_wrap_1" class="carousel-inner" style="height: 601px">
+								<div><img src="image/catalog/010/ss5.jpg" alt="Slider"></div>
+					</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+ var camera_slider = $("#camera_wrap_1");
+     
+ camera_slider.owlCarousel({
+ 	 slideSpeed : 300,
+  	 lazyLoad : true,
+     singleItem: true,
+     autoPlay: 13000,
+     stopOnHover: true,
+     navigation: true,
+          navigationText: false
+  });
+  
+$(window).load(function() {	
+  $("#camera_1 .spinner").fadeOut(200);
+  $("#camera_wrap_1").css("height", "auto");
+});	
+</script>
+    [1] => <div class="row banners banners-with-padding-0 responsive-margin-top-30" style="position: relative;margin-top: -60px;z-index:22">
+     <div class="col-sm-4"><a href="#"><img src="/img/ss2.jpg" height="333px"></a></div>
+     <div class="col-sm-8">
+          <div class="row banners banners-with-padding-0">
+               <div class="col-sm-12"><a href="/index.php?route=product/category&path=20"><img src="/img/ss1.jpg" height="333px"></a></div>
+           
+          </div>
+     </div>     
+</div>
+    [2] => <div class="box clearfix box-with-products with-scroll box-no-advanced">
+    <!-- Carousel nav -->
+  <a class="next" href="#myCarousel45815023" id="myCarousel45815023_next"><span></span></a>
+  <a class="prev" href="#myCarousel45815023" id="myCarousel45815023_prev"><span></span></a>
+  
+  <script type="text/javascript">
+  $(document).ready(function() {
+    var owl45815023 = $(".box #myCarousel45815023 .carousel-inner");
+  	
+    $("#myCarousel45815023_next").click(function(){
+        owl45815023.trigger('owl.next');
+        return false;
+      })
+    $("#myCarousel45815023_prev").click(function(){
+        owl45815023.trigger('owl.prev');
+        return false;
+    });
+      
+    owl45815023.owlCarousel({
+    	  slideSpeed : 500,
+        singleItem:true,
+             });
+  });
+  </script>
+  	
+  <div class="box-heading">ХИТЫ ПРОДАЖ</div>
+  <div class="strip-line"></div>
+  <div class="clear"></div>
+  <div class="box-content products">
+    <div class="box-product">
+    	<div id="myCarousel45815023" class="carousel slide">
+    		<!-- Carousel items -->
+    		<div class="carousel-inner">
+    				    			<div class="active item"><div class="product-grid"><div class="row">	    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya-dn-32kh18-bnap-l015m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/120/ С РАСТРУБОМ СЕРАЯ PP-H-220x220.jpg" alt="Труба PP-H с раструбом серая Дн 32 б/нап L=0,15м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya-dn-32kh18-bnap-l015m-vk">Труба PP-H с раструбом серая Дн 32 б/нап L=0,15м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+									 <div class="new">New</div>
+			 			
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-220x220.jpg" alt="Манометр МТ 63П 0,6МПа М12х1,5 / G ¼ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 63П 0,6МПа М12х1,5 / G ¼ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l20m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/112/6ec87357f9568cf014e76fa404b9aaaf-220x220.png" alt="Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=2,0м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l20m-vk">Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=2,0м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l01-m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/112/6ec87357f9568cf014e76fa404b9aaaf-220x220.png" alt="Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=0,1 м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l01-m-vk">Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=0,1 м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya-dn-32kh18-bnap-l025m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/112/6ec87357f9568cf014e76fa404b9aaaf-220x220.png" alt="Труба PP-H с раструбом серая Дн 32х1,8 б/нап L=0,25м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya-dn-32kh18-bnap-l025m-vk">Труба PP-H с раструбом серая Дн 32х1,8 б/нап L=0,25м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l15m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/112/6ec87357f9568cf014e76fa404b9aaaf-220x220.png" alt="Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=1,5м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l15m-vk">Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=1,5м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-315-bnap">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 315 б/нап" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-315-bnap">Заглушка НПВХ коричневая Дн 315 б/нап</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-160-bnap">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 160 б/нап" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-160-bnap">Заглушка НПВХ коричневая Дн 160 б/нап</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-200-bnap">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 200 б/нап" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-200-bnap">Заглушка НПВХ коричневая Дн 200 б/нап</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-110-bnap----">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 110 б/нап    " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-110-bnap----">Заглушка НПВХ коричневая Дн 110 б/нап    </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-250-bnap">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 250 б/нап" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-250-bnap">Заглушка НПВХ коричневая Дн 250 б/нап</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-300">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image015-220x220.jpg" alt="ПНД подставки фланцевая ДУ 300" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-300">ПНД подставки фланцевая ДУ 300</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-100">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image003-220x220.jpg" alt="ПНД подставки фланцевая ДУ 100" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-100">ПНД подставки фланцевая ДУ 100</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-150">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image007-220x220.jpg" alt="ПНД подставки фланцевая ДУ 150" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-150">ПНД подставки фланцевая ДУ 150</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-200">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image011-220x220.jpg" alt="ПНД подставки фланцевая ДУ 200" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-200">ПНД подставки фланцевая ДУ 200</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-225-mm---------------------------">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image009-220x220.jpg" alt="ПНД подставки под сварку с трубой 225 мм                           " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-225-mm---------------------------">ПНД подставки под сварку с трубой 225 мм                           </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-160-mm----------------------------">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image005-220x220.jpg" alt="ПНД подставки под сварку с трубой 160 мм                            " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-160-mm----------------------------">ПНД подставки под сварку с трубой 160 мм                            </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-315-mm-------------------">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image013-220x220.jpg" alt="ПНД подставки под сварку с трубой 315 мм                   " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-315-mm-------------------">ПНД подставки под сварку с трубой 315 мм                   </a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/Vozduxootvodchik-ruchnoj-STI-10">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/cu5niqth-220x220.jpg" alt="Воздухоотводчик ручной STI 10" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/Vozduxootvodchik-ruchnoj-STI-10">Воздухоотводчик ручной STI 10</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-svarku-s-truboj-110-mm-">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image001-220x220.jpg" alt="ПНД подставки сварку с трубой 110 мм " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-svarku-s-truboj-110-mm-">ПНД подставки сварку с трубой 110 мм </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/Vozduxootvodchik-ruchnoj-STI-15">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/i1u5mab1-220x220.jpg" alt="Воздухоотводчик ручной STI 15" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/Vozduxootvodchik-ruchnoj-STI-15">Воздухоотводчик ручной STI 15</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/Nasos-cirkulyacionnyj-Wilo-RS-25-70-c-soed.-G-1½">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/j4t4e2mf-220x220.jpg" alt="Насос циркуляционный Wilo RS 25-70 c соед. G 1½&quot; -" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/Nasos-cirkulyacionnyj-Wilo-RS-25-70-c-soed.-G-1½">Насос циркуляционный Wilo RS 25-70 c соед. G 1½&quot; -</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pptf-trojnik-podstavka-100kh50-stal-ru10">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/113/700-220x220.jpg" alt="ППТФ тройник-подставка 100х50 (сталь, Ру10)" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pptf-trojnik-podstavka-100kh50-stal-ru10">ППТФ тройник-подставка 100х50 (сталь, Ру10)</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/Nasos-cirkulyacionnyj-Wilo-RS-25-60-s-soed.-G-1½">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/zr1ndmva-220x220.jpg" alt="Насос циркуляционный Wilo RS 25-60 с соед. G 1½&quot; " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/Nasos-cirkulyacionnyj-Wilo-RS-25-60-s-soed.-G-1½">Насос циркуляционный Wilo RS 25-60 с соед. G 1½&quot; </a></div>
+					</div>
+</div>	    			</div>
+    			    			</div></div></div>    		</div>
+		</div>
+    </div>
+  </div>
+</div>
+
+    [3] => <div class="box clearfix box-with-products with-scroll box-no-advanced">
+    <!-- Carousel nav -->
+  <a class="next" href="#myCarousel194049556" id="myCarousel194049556_next"><span></span></a>
+  <a class="prev" href="#myCarousel194049556" id="myCarousel194049556_prev"><span></span></a>
+  
+  <script type="text/javascript">
+  $(document).ready(function() {
+    var owl194049556 = $(".box #myCarousel194049556 .carousel-inner");
+  	
+    $("#myCarousel194049556_next").click(function(){
+        owl194049556.trigger('owl.next');
+        return false;
+      })
+    $("#myCarousel194049556_prev").click(function(){
+        owl194049556.trigger('owl.prev');
+        return false;
+    });
+      
+    owl194049556.owlCarousel({
+    	  slideSpeed : 500,
+        singleItem:true,
+             });
+  });
+  </script>
+  	
+  <div class="box-heading">НОВИНКИ</div>
+  <div class="strip-line"></div>
+  <div class="clear"></div>
+  <div class="box-content products">
+    <div class="box-product">
+    	<div id="myCarousel194049556" class="carousel slide">
+    		<!-- Carousel items -->
+    		<div class="carousel-inner">
+    				    			<div class="active item"><div class="product-grid"><div class="row">	    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+									 <div class="new">New</div>
+			 			
+			<div class="image ">
+				<a href="http://techsnab71.ru/index.php?route=product/product&amp;product_id=8122">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/umccsujb-200x200.jpg" alt="Хомут трубный 138-142 (5&quot;)" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/index.php?route=product/product&amp;product_id=8122">Хомут трубный 138-142 (5&quot;)</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+									 <div class="new">New</div>
+			 			
+			<div class="image ">
+				<a href="http://techsnab71.ru/index.php?route=product/product&amp;product_id=8121">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/t22bxumx-200x200.jpg" alt="Хомут трубный 108-114 (4&quot;)" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/index.php?route=product/product&amp;product_id=8121">Хомут трубный 108-114 (4&quot;)</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/1231-200x200.png" alt="Хомут для монтажа пластиковой канализации 50 " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Хомут для монтажа пластиковой канализации 50 </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/1231-200x200.png" alt="Хомут для монтажа пластиковой канализации 110 " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Хомут для монтажа пластиковой канализации 110 </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/smazka-tehnicheskaya-250g-div-classcatalog-detail-properties-main-list-div-classcatalog-detail-properties-main-list-item-div-classcatalog-detail-properties-m-800x800-200x200.jpg" alt="Смазка техническая силиконовая туба 250 гр." class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Смазка техническая силиконовая туба 250 гр.</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 63П 1,6МПа М12х1,5 / G ¼ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 63П 1,6МПа М12х1,5 / G ¼ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 63П 1,0МПа М12х1,5 / G ¼ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 63П 1,0МПа М12х1,5 / G ¼ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+									 <div class="new">New</div>
+			 			
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 63П 0,6МПа М12х1,5 / G ¼ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 63П 0,6МПа М12х1,5 / G ¼ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 4,0МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 4,0МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 2,5МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 2,5МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 1,6МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 1,6МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 1,0МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 1,0МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 0,6МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 0,6МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 4,0МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 4,0МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 2,5МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 2,5МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 1,6МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 1,6МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 1,0МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 1,0МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 0,6МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 0,6МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 50х73" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 50х73</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 50х32" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 50х32</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 50х25" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 50х25</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 40х73" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 40х73</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 32х40" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 32х40</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 25х40" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 25х40</a></div>
+					</div>
+</div>	    			</div>
+    			    			</div></div></div>    		</div>
+		</div>
+    </div>
+  </div>
+</div>
+
+    [4] => 
+     <div class="advanced-grid advanced-grid-31755724 responsive-margin-top-40 " style="margin-top: 60px;margin-bottom: 0px;">
+                    <div style="background-image: url(image/catalog/111/fon5.jpg);background-position: top center;background-repeat: no-repeat;background-attachment: scroll;">                         <div class="container">
+                    <div style="padding-top: 0px;padding-left: 0px;padding-bottom: 0px;padding-right: 0px;">
+                         <div class="row">
+                                                                                                                                  <div class="col-sm-12">
+                                                                                                                                       <div class="carparts-parallax">
+     <div class="heading">20 лет</div>
+     <div class="heading2">На рынке сантехнического<br> и инженерного оборудования</div>
+
+     <a href="#" class="button carparts-button">О компании ТехСнаб</a>
+</div>                                                                                                                        </div>
+                                                       </div>
+                    </div>
+               </div>
+          </div>
+          
+               </div>
+
+<script type="text/javascript">
+     function force_full_width_31755724() {
+          var p = $(".standard-body .full-width .advanced-grid-31755724");
+          
+                    if(p.size() > 0) {
+               p.width($('body').width());
+               p.css("left", "0px");
+               var position = p.offset();
+               p.css("left", "-" + position.left + "px");
+               p.find(".container").css("padding-left", position.left);
+               p.find(".container").css("padding-right", position.left);
+               
+          }
+                    
+          var s = $(".standard-body .fixed .advanced-grid-31755724");
+                    if(s.size() > 0) {
+               s.width($('.standard-body .fixed .pattern').width());
+               s.css("left", "0px");
+               var position = s.offset();
+               var position2 = $('.standard-body .fixed .pattern').offset();
+               var position3 = position.left-position2.left;
+               s.css("left", "-" + position3 + "px");
+               s.find(".container").css("padding-left", position3);
+               s.find(".container").css("padding-right", position3);
+          }
+                    
+          var c = $(".fixed-body .advanced-grid-31755724");
+                    if(c.size() > 0) {
+               c.width($('.fixed-body .main-fixed').width());
+               c.css("left", "0px");
+               var position = c.offset();
+               var position2 = $('.fixed-body .main-fixed').offset();
+               var position3 = position.left-position2.left;
+               c.css("left", "-" + position3 + "px");
+               c.find(".container").css("padding-left", position3);
+               c.find(".container").css("padding-right", position3);
+          }
+               }
+     
+     force_full_width_31755724();
+     
+     $(window).resize(function() {
+          force_full_width_31755724();
+     });
+</script>
+
+)
+
+2021-07-30 10:02:58 Array
+(
+    [0] => <div class="fullwidth" id="camera_1">
+	<div class="camera_slider">
+		<div class="spinner"></div>
+		<div class="camera_wrap" id="camera_wrap_1" class="carousel-inner" style="height: 601px">
+								<div><img src="image/catalog/010/ss5.jpg" alt="Slider"></div>
+					</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+ var camera_slider = $("#camera_wrap_1");
+     
+ camera_slider.owlCarousel({
+ 	 slideSpeed : 300,
+  	 lazyLoad : true,
+     singleItem: true,
+     autoPlay: 13000,
+     stopOnHover: true,
+     navigation: true,
+          navigationText: false
+  });
+  
+$(window).load(function() {	
+  $("#camera_1 .spinner").fadeOut(200);
+  $("#camera_wrap_1").css("height", "auto");
+});	
+</script>
+    [1] => <div class="row banners banners-with-padding-0 responsive-margin-top-30" style="position: relative;margin-top: -60px;z-index:22">
+     <div class="col-sm-4"><a href="#"><img src="/img/ss2.jpg" height="333px"></a></div>
+     <div class="col-sm-8">
+          <div class="row banners banners-with-padding-0">
+               <div class="col-sm-12"><a href="/index.php?route=product/category&path=20"><img src="/img/ss1.jpg" height="333px"></a></div>
+           
+          </div>
+     </div>     
+</div>
+    [2] => <div class="box clearfix box-with-products with-scroll box-no-advanced">
+    <!-- Carousel nav -->
+  <a class="next" href="#myCarousel148439516" id="myCarousel148439516_next"><span></span></a>
+  <a class="prev" href="#myCarousel148439516" id="myCarousel148439516_prev"><span></span></a>
+  
+  <script type="text/javascript">
+  $(document).ready(function() {
+    var owl148439516 = $(".box #myCarousel148439516 .carousel-inner");
+  	
+    $("#myCarousel148439516_next").click(function(){
+        owl148439516.trigger('owl.next');
+        return false;
+      })
+    $("#myCarousel148439516_prev").click(function(){
+        owl148439516.trigger('owl.prev');
+        return false;
+    });
+      
+    owl148439516.owlCarousel({
+    	  slideSpeed : 500,
+        singleItem:true,
+             });
+  });
+  </script>
+  	
+  <div class="box-heading">ХИТЫ ПРОДАЖ</div>
+  <div class="strip-line"></div>
+  <div class="clear"></div>
+  <div class="box-content products">
+    <div class="box-product">
+    	<div id="myCarousel148439516" class="carousel slide">
+    		<!-- Carousel items -->
+    		<div class="carousel-inner">
+    				    			<div class="active item"><div class="product-grid"><div class="row">	    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya-dn-32kh18-bnap-l015m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/120/ С РАСТРУБОМ СЕРАЯ PP-H-220x220.jpg" alt="Труба PP-H с раструбом серая Дн 32 б/нап L=0,15м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya-dn-32kh18-bnap-l015m-vk">Труба PP-H с раструбом серая Дн 32 б/нап L=0,15м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+									 <div class="new">New</div>
+			 			
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-220x220.jpg" alt="Манометр МТ 63П 0,6МПа М12х1,5 / G ¼ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 63П 0,6МПа М12х1,5 / G ¼ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l20m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/112/6ec87357f9568cf014e76fa404b9aaaf-220x220.png" alt="Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=2,0м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l20m-vk">Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=2,0м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l01-m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/112/6ec87357f9568cf014e76fa404b9aaaf-220x220.png" alt="Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=0,1 м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l01-m-vk">Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=0,1 м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya-dn-32kh18-bnap-l025m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/112/6ec87357f9568cf014e76fa404b9aaaf-220x220.png" alt="Труба PP-H с раструбом серая Дн 32х1,8 б/нап L=0,25м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya-dn-32kh18-bnap-l025m-vk">Труба PP-H с раструбом серая Дн 32х1,8 б/нап L=0,25м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l15m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/112/6ec87357f9568cf014e76fa404b9aaaf-220x220.png" alt="Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=1,5м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l15m-vk">Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=1,5м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-315-bnap">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 315 б/нап" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-315-bnap">Заглушка НПВХ коричневая Дн 315 б/нап</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-160-bnap">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 160 б/нап" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-160-bnap">Заглушка НПВХ коричневая Дн 160 б/нап</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-200-bnap">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 200 б/нап" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-200-bnap">Заглушка НПВХ коричневая Дн 200 б/нап</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-110-bnap----">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 110 б/нап    " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-110-bnap----">Заглушка НПВХ коричневая Дн 110 б/нап    </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-250-bnap">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 250 б/нап" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-250-bnap">Заглушка НПВХ коричневая Дн 250 б/нап</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-300">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image015-220x220.jpg" alt="ПНД подставки фланцевая ДУ 300" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-300">ПНД подставки фланцевая ДУ 300</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-100">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image003-220x220.jpg" alt="ПНД подставки фланцевая ДУ 100" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-100">ПНД подставки фланцевая ДУ 100</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-150">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image007-220x220.jpg" alt="ПНД подставки фланцевая ДУ 150" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-150">ПНД подставки фланцевая ДУ 150</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-200">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image011-220x220.jpg" alt="ПНД подставки фланцевая ДУ 200" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-200">ПНД подставки фланцевая ДУ 200</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-225-mm---------------------------">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image009-220x220.jpg" alt="ПНД подставки под сварку с трубой 225 мм                           " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-225-mm---------------------------">ПНД подставки под сварку с трубой 225 мм                           </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-160-mm----------------------------">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image005-220x220.jpg" alt="ПНД подставки под сварку с трубой 160 мм                            " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-160-mm----------------------------">ПНД подставки под сварку с трубой 160 мм                            </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-315-mm-------------------">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image013-220x220.jpg" alt="ПНД подставки под сварку с трубой 315 мм                   " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-315-mm-------------------">ПНД подставки под сварку с трубой 315 мм                   </a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/Vozduxootvodchik-ruchnoj-STI-10">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/cu5niqth-220x220.jpg" alt="Воздухоотводчик ручной STI 10" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/Vozduxootvodchik-ruchnoj-STI-10">Воздухоотводчик ручной STI 10</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-svarku-s-truboj-110-mm-">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image001-220x220.jpg" alt="ПНД подставки сварку с трубой 110 мм " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-svarku-s-truboj-110-mm-">ПНД подставки сварку с трубой 110 мм </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/Vozduxootvodchik-ruchnoj-STI-15">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/i1u5mab1-220x220.jpg" alt="Воздухоотводчик ручной STI 15" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/Vozduxootvodchik-ruchnoj-STI-15">Воздухоотводчик ручной STI 15</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/Nasos-cirkulyacionnyj-Wilo-RS-25-70-c-soed.-G-1½">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/j4t4e2mf-220x220.jpg" alt="Насос циркуляционный Wilo RS 25-70 c соед. G 1½&quot; -" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/Nasos-cirkulyacionnyj-Wilo-RS-25-70-c-soed.-G-1½">Насос циркуляционный Wilo RS 25-70 c соед. G 1½&quot; -</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pptf-trojnik-podstavka-100kh50-stal-ru10">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/113/700-220x220.jpg" alt="ППТФ тройник-подставка 100х50 (сталь, Ру10)" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pptf-trojnik-podstavka-100kh50-stal-ru10">ППТФ тройник-подставка 100х50 (сталь, Ру10)</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/Nasos-cirkulyacionnyj-Wilo-RS-25-60-s-soed.-G-1½">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/zr1ndmva-220x220.jpg" alt="Насос циркуляционный Wilo RS 25-60 с соед. G 1½&quot; " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/Nasos-cirkulyacionnyj-Wilo-RS-25-60-s-soed.-G-1½">Насос циркуляционный Wilo RS 25-60 с соед. G 1½&quot; </a></div>
+					</div>
+</div>	    			</div>
+    			    			</div></div></div>    		</div>
+		</div>
+    </div>
+  </div>
+</div>
+
+    [3] => <div class="box clearfix box-with-products with-scroll box-no-advanced">
+    <!-- Carousel nav -->
+  <a class="next" href="#myCarousel81868613" id="myCarousel81868613_next"><span></span></a>
+  <a class="prev" href="#myCarousel81868613" id="myCarousel81868613_prev"><span></span></a>
+  
+  <script type="text/javascript">
+  $(document).ready(function() {
+    var owl81868613 = $(".box #myCarousel81868613 .carousel-inner");
+  	
+    $("#myCarousel81868613_next").click(function(){
+        owl81868613.trigger('owl.next');
+        return false;
+      })
+    $("#myCarousel81868613_prev").click(function(){
+        owl81868613.trigger('owl.prev');
+        return false;
+    });
+      
+    owl81868613.owlCarousel({
+    	  slideSpeed : 500,
+        singleItem:true,
+             });
+  });
+  </script>
+  	
+  <div class="box-heading">НОВИНКИ</div>
+  <div class="strip-line"></div>
+  <div class="clear"></div>
+  <div class="box-content products">
+    <div class="box-product">
+    	<div id="myCarousel81868613" class="carousel slide">
+    		<!-- Carousel items -->
+    		<div class="carousel-inner">
+    				    			<div class="active item"><div class="product-grid"><div class="row">	    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+									 <div class="new">New</div>
+			 			
+			<div class="image ">
+				<a href="http://techsnab71.ru/index.php?route=product/product&amp;product_id=8122">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/umccsujb-200x200.jpg" alt="Хомут трубный 138-142 (5&quot;)" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/index.php?route=product/product&amp;product_id=8122">Хомут трубный 138-142 (5&quot;)</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+									 <div class="new">New</div>
+			 			
+			<div class="image ">
+				<a href="http://techsnab71.ru/index.php?route=product/product&amp;product_id=8121">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/t22bxumx-200x200.jpg" alt="Хомут трубный 108-114 (4&quot;)" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/index.php?route=product/product&amp;product_id=8121">Хомут трубный 108-114 (4&quot;)</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/1231-200x200.png" alt="Хомут для монтажа пластиковой канализации 50 " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Хомут для монтажа пластиковой канализации 50 </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/1231-200x200.png" alt="Хомут для монтажа пластиковой канализации 110 " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Хомут для монтажа пластиковой канализации 110 </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/smazka-tehnicheskaya-250g-div-classcatalog-detail-properties-main-list-div-classcatalog-detail-properties-main-list-item-div-classcatalog-detail-properties-m-800x800-200x200.jpg" alt="Смазка техническая силиконовая туба 250 гр." class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Смазка техническая силиконовая туба 250 гр.</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 63П 1,6МПа М12х1,5 / G ¼ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 63П 1,6МПа М12х1,5 / G ¼ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 63П 1,0МПа М12х1,5 / G ¼ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 63П 1,0МПа М12х1,5 / G ¼ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+									 <div class="new">New</div>
+			 			
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 63П 0,6МПа М12х1,5 / G ¼ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 63П 0,6МПа М12х1,5 / G ¼ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 4,0МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 4,0МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 2,5МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 2,5МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 1,6МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 1,6МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 1,0МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 1,0МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 0,6МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 0,6МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 4,0МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 4,0МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 2,5МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 2,5МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 1,6МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 1,6МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 1,0МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 1,0МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 0,6МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 0,6МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 50х73" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 50х73</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 50х32" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 50х32</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 50х25" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 50х25</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 40х73" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 40х73</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 32х40" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 32х40</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 25х40" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 25х40</a></div>
+					</div>
+</div>	    			</div>
+    			    			</div></div></div>    		</div>
+		</div>
+    </div>
+  </div>
+</div>
+
+    [4] => 
+     <div class="advanced-grid advanced-grid-76019904 responsive-margin-top-40 " style="margin-top: 60px;margin-bottom: 0px;">
+                    <div style="background-image: url(image/catalog/111/fon5.jpg);background-position: top center;background-repeat: no-repeat;background-attachment: scroll;">                         <div class="container">
+                    <div style="padding-top: 0px;padding-left: 0px;padding-bottom: 0px;padding-right: 0px;">
+                         <div class="row">
+                                                                                                                                  <div class="col-sm-12">
+                                                                                                                                       <div class="carparts-parallax">
+     <div class="heading">20 лет</div>
+     <div class="heading2">На рынке сантехнического<br> и инженерного оборудования</div>
+
+     <a href="#" class="button carparts-button">О компании ТехСнаб</a>
+</div>                                                                                                                        </div>
+                                                       </div>
+                    </div>
+               </div>
+          </div>
+          
+               </div>
+
+<script type="text/javascript">
+     function force_full_width_76019904() {
+          var p = $(".standard-body .full-width .advanced-grid-76019904");
+          
+                    if(p.size() > 0) {
+               p.width($('body').width());
+               p.css("left", "0px");
+               var position = p.offset();
+               p.css("left", "-" + position.left + "px");
+               p.find(".container").css("padding-left", position.left);
+               p.find(".container").css("padding-right", position.left);
+               
+          }
+                    
+          var s = $(".standard-body .fixed .advanced-grid-76019904");
+                    if(s.size() > 0) {
+               s.width($('.standard-body .fixed .pattern').width());
+               s.css("left", "0px");
+               var position = s.offset();
+               var position2 = $('.standard-body .fixed .pattern').offset();
+               var position3 = position.left-position2.left;
+               s.css("left", "-" + position3 + "px");
+               s.find(".container").css("padding-left", position3);
+               s.find(".container").css("padding-right", position3);
+          }
+                    
+          var c = $(".fixed-body .advanced-grid-76019904");
+                    if(c.size() > 0) {
+               c.width($('.fixed-body .main-fixed').width());
+               c.css("left", "0px");
+               var position = c.offset();
+               var position2 = $('.fixed-body .main-fixed').offset();
+               var position3 = position.left-position2.left;
+               c.css("left", "-" + position3 + "px");
+               c.find(".container").css("padding-left", position3);
+               c.find(".container").css("padding-right", position3);
+          }
+               }
+     
+     force_full_width_76019904();
+     
+     $(window).resize(function() {
+          force_full_width_76019904();
+     });
+</script>
+
+)
+
+2021-07-30 10:09:54 Array
+(
+    [0] => <div class="fullwidth" id="camera_1">
+	<div class="camera_slider">
+		<div class="spinner"></div>
+		<div class="camera_wrap" id="camera_wrap_1" class="carousel-inner" style="height: 601px">
+								<div><img src="image/catalog/010/ss5.jpg" alt="Slider"></div>
+					</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+ var camera_slider = $("#camera_wrap_1");
+     
+ camera_slider.owlCarousel({
+ 	 slideSpeed : 300,
+  	 lazyLoad : true,
+     singleItem: true,
+     autoPlay: 13000,
+     stopOnHover: true,
+     navigation: true,
+          navigationText: false
+  });
+  
+$(window).load(function() {	
+  $("#camera_1 .spinner").fadeOut(200);
+  $("#camera_wrap_1").css("height", "auto");
+});	
+</script>
+    [1] => <div class="row banners banners-with-padding-0 responsive-margin-top-30" style="position: relative;margin-top: -60px;z-index:22">
+     <div class="col-sm-4"><a href="#"><img src="/img/ss2.jpg" height="333px"></a></div>
+     <div class="col-sm-8">
+          <div class="row banners banners-with-padding-0">
+               <div class="col-sm-12"><a href="/index.php?route=product/category&path=20"><img src="/img/ss1.jpg" height="333px"></a></div>
+           
+          </div>
+     </div>     
+</div>
+    [2] => <div class="box clearfix box-with-products with-scroll box-no-advanced">
+    <!-- Carousel nav -->
+  <a class="next" href="#myCarousel49227885" id="myCarousel49227885_next"><span></span></a>
+  <a class="prev" href="#myCarousel49227885" id="myCarousel49227885_prev"><span></span></a>
+  
+  <script type="text/javascript">
+  $(document).ready(function() {
+    var owl49227885 = $(".box #myCarousel49227885 .carousel-inner");
+  	
+    $("#myCarousel49227885_next").click(function(){
+        owl49227885.trigger('owl.next');
+        return false;
+      })
+    $("#myCarousel49227885_prev").click(function(){
+        owl49227885.trigger('owl.prev');
+        return false;
+    });
+      
+    owl49227885.owlCarousel({
+    	  slideSpeed : 500,
+        singleItem:true,
+             });
+  });
+  </script>
+  	
+  <div class="box-heading">ХИТЫ ПРОДАЖ</div>
+  <div class="strip-line"></div>
+  <div class="clear"></div>
+  <div class="box-content products">
+    <div class="box-product">
+    	<div id="myCarousel49227885" class="carousel slide">
+    		<!-- Carousel items -->
+    		<div class="carousel-inner">
+    				    			<div class="active item"><div class="product-grid"><div class="row">	    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya-dn-32kh18-bnap-l015m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/120/ С РАСТРУБОМ СЕРАЯ PP-H-220x220.jpg" alt="Труба PP-H с раструбом серая Дн 32 б/нап L=0,15м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya-dn-32kh18-bnap-l015m-vk">Труба PP-H с раструбом серая Дн 32 б/нап L=0,15м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+									 <div class="new">New</div>
+			 			
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-220x220.jpg" alt="Манометр МТ 63П 0,6МПа М12х1,5 / G ¼ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 63П 0,6МПа М12х1,5 / G ¼ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l20m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/112/6ec87357f9568cf014e76fa404b9aaaf-220x220.png" alt="Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=2,0м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l20m-vk">Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=2,0м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l01-m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/112/6ec87357f9568cf014e76fa404b9aaaf-220x220.png" alt="Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=0,1 м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l01-m-vk">Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=0,1 м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya-dn-32kh18-bnap-l025m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/112/6ec87357f9568cf014e76fa404b9aaaf-220x220.png" alt="Труба PP-H с раструбом серая Дн 32х1,8 б/нап L=0,25м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya-dn-32kh18-bnap-l025m-vk">Труба PP-H с раструбом серая Дн 32х1,8 б/нап L=0,25м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l15m-vk">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/112/6ec87357f9568cf014e76fa404b9aaaf-220x220.png" alt="Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=1,5м в/к" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/truba-pp-h-s-rastrubom-seraya--dn-40kh18-bnap-l15m-vk">Труба PP-H с раструбом серая  Дн 40х1,8 б/нап L=1,5м в/к</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-315-bnap">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 315 б/нап" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-315-bnap">Заглушка НПВХ коричневая Дн 315 б/нап</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-160-bnap">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 160 б/нап" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-160-bnap">Заглушка НПВХ коричневая Дн 160 б/нап</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-200-bnap">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 200 б/нап" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-200-bnap">Заглушка НПВХ коричневая Дн 200 б/нап</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-110-bnap----">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 110 б/нап    " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-110-bnap----">Заглушка НПВХ коричневая Дн 110 б/нап    </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-250-bnap">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/119/ НПВХ КОРИЧНЕВАЯ-220x220.jpg" alt="Заглушка НПВХ коричневая Дн 250 б/нап" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/zaglushka-npvkh-korichnevaya-dn-250-bnap">Заглушка НПВХ коричневая Дн 250 б/нап</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-300">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image015-220x220.jpg" alt="ПНД подставки фланцевая ДУ 300" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-300">ПНД подставки фланцевая ДУ 300</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-100">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image003-220x220.jpg" alt="ПНД подставки фланцевая ДУ 100" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-100">ПНД подставки фланцевая ДУ 100</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-150">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image007-220x220.jpg" alt="ПНД подставки фланцевая ДУ 150" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-150">ПНД подставки фланцевая ДУ 150</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-200">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image011-220x220.jpg" alt="ПНД подставки фланцевая ДУ 200" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-flanczevaya-du-200">ПНД подставки фланцевая ДУ 200</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-225-mm---------------------------">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image009-220x220.jpg" alt="ПНД подставки под сварку с трубой 225 мм                           " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-225-mm---------------------------">ПНД подставки под сварку с трубой 225 мм                           </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-160-mm----------------------------">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image005-220x220.jpg" alt="ПНД подставки под сварку с трубой 160 мм                            " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-160-mm----------------------------">ПНД подставки под сварку с трубой 160 мм                            </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-315-mm-------------------">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image013-220x220.jpg" alt="ПНД подставки под сварку с трубой 315 мм                   " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-pod-svarku-s-truboj-315-mm-------------------">ПНД подставки под сварку с трубой 315 мм                   </a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/Vozduxootvodchik-ruchnoj-STI-10">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/cu5niqth-220x220.jpg" alt="Воздухоотводчик ручной STI 10" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/Vozduxootvodchik-ruchnoj-STI-10">Воздухоотводчик ручной STI 10</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pnd-podstavki-svarku-s-truboj-110-mm-">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/114/image001-220x220.jpg" alt="ПНД подставки сварку с трубой 110 мм " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pnd-podstavki-svarku-s-truboj-110-mm-">ПНД подставки сварку с трубой 110 мм </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/Vozduxootvodchik-ruchnoj-STI-15">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/i1u5mab1-220x220.jpg" alt="Воздухоотводчик ручной STI 15" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/Vozduxootvodchik-ruchnoj-STI-15">Воздухоотводчик ручной STI 15</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/Nasos-cirkulyacionnyj-Wilo-RS-25-70-c-soed.-G-1½">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/j4t4e2mf-220x220.jpg" alt="Насос циркуляционный Wilo RS 25-70 c соед. G 1½&quot; -" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/Nasos-cirkulyacionnyj-Wilo-RS-25-70-c-soed.-G-1½">Насос циркуляционный Wilo RS 25-70 c соед. G 1½&quot; -</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/pptf-trojnik-podstavka-100kh50-stal-ru10">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/113/700-220x220.jpg" alt="ППТФ тройник-подставка 100х50 (сталь, Ру10)" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/pptf-trojnik-podstavka-100kh50-stal-ru10">ППТФ тройник-подставка 100х50 (сталь, Ру10)</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/Nasos-cirkulyacionnyj-Wilo-RS-25-60-s-soed.-G-1½">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/zr1ndmva-220x220.jpg" alt="Насос циркуляционный Wilo RS 25-60 с соед. G 1½&quot; " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/Nasos-cirkulyacionnyj-Wilo-RS-25-60-s-soed.-G-1½">Насос циркуляционный Wilo RS 25-60 с соед. G 1½&quot; </a></div>
+					</div>
+</div>	    			</div>
+    			    			</div></div></div>    		</div>
+		</div>
+    </div>
+  </div>
+</div>
+
+    [3] => <div class="box clearfix box-with-products with-scroll box-no-advanced">
+    <!-- Carousel nav -->
+  <a class="next" href="#myCarousel15800775" id="myCarousel15800775_next"><span></span></a>
+  <a class="prev" href="#myCarousel15800775" id="myCarousel15800775_prev"><span></span></a>
+  
+  <script type="text/javascript">
+  $(document).ready(function() {
+    var owl15800775 = $(".box #myCarousel15800775 .carousel-inner");
+  	
+    $("#myCarousel15800775_next").click(function(){
+        owl15800775.trigger('owl.next');
+        return false;
+      })
+    $("#myCarousel15800775_prev").click(function(){
+        owl15800775.trigger('owl.prev');
+        return false;
+    });
+      
+    owl15800775.owlCarousel({
+    	  slideSpeed : 500,
+        singleItem:true,
+             });
+  });
+  </script>
+  	
+  <div class="box-heading">НОВИНКИ</div>
+  <div class="strip-line"></div>
+  <div class="clear"></div>
+  <div class="box-content products">
+    <div class="box-product">
+    	<div id="myCarousel15800775" class="carousel slide">
+    		<!-- Carousel items -->
+    		<div class="carousel-inner">
+    				    			<div class="active item"><div class="product-grid"><div class="row">	    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+									 <div class="new">New</div>
+			 			
+			<div class="image ">
+				<a href="http://techsnab71.ru/index.php?route=product/product&amp;product_id=8122">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/umccsujb-200x200.jpg" alt="Хомут трубный 138-142 (5&quot;)" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/index.php?route=product/product&amp;product_id=8122">Хомут трубный 138-142 (5&quot;)</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+									 <div class="new">New</div>
+			 			
+			<div class="image ">
+				<a href="http://techsnab71.ru/index.php?route=product/product&amp;product_id=8121">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/116/t22bxumx-200x200.jpg" alt="Хомут трубный 108-114 (4&quot;)" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/index.php?route=product/product&amp;product_id=8121">Хомут трубный 108-114 (4&quot;)</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/1231-200x200.png" alt="Хомут для монтажа пластиковой канализации 50 " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Хомут для монтажа пластиковой канализации 50 </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/1231-200x200.png" alt="Хомут для монтажа пластиковой канализации 110 " class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Хомут для монтажа пластиковой канализации 110 </a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/smazka-tehnicheskaya-250g-div-classcatalog-detail-properties-main-list-div-classcatalog-detail-properties-main-list-item-div-classcatalog-detail-properties-m-800x800-200x200.jpg" alt="Смазка техническая силиконовая туба 250 гр." class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Смазка техническая силиконовая туба 250 гр.</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 63П 1,6МПа М12х1,5 / G ¼ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 63П 1,6МПа М12х1,5 / G ¼ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 63П 1,0МПа М12х1,5 / G ¼ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 63П 1,0МПа М12х1,5 / G ¼ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+									 <div class="new">New</div>
+			 			
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 63П 0,6МПа М12х1,5 / G ¼ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 63П 0,6МПа М12х1,5 / G ¼ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 4,0МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 4,0МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 2,5МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 2,5МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 1,6МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 1,6МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 1,0МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 1,0МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 160М 0,6МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 160М 0,6МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 4,0МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 4,0МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 2,5МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 2,5МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 1,6МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 1,6МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 1,0МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 1,0МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/125/ имени-2-200x200.jpg" alt="Манометр МТ 100М 0,6МПа М20х1,5 / G ½ Класс точности 1,5" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манометр МТ 100М 0,6МПа М20х1,5 / G ½ Класс точности 1,5</a></div>
+					</div>
+</div>	    			</div>
+    				    				    			</div></div></div><div class="item"><div class="product-grid"><div class="row">	    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 50х73" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 50х73</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 50х32" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 50х32</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 50х25" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 50х25</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3  ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 40х73" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 40х73</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 32х40" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 32х40</a></div>
+					</div>
+</div>	    			</div>
+    				    				    				    			<div class="col-sm-2 col-xs-6 col-md-25 col-lg-2 col-sm-3 hidden-md hidden-sm ">
+	    				
+<!-- Product -->
+<div class="product clearfix product-hover">
+	<div class="left">
+								
+			<div class="image ">
+				<a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">
+					 
+										<img src="https://techsnab71.ru/image/cache/catalog/126/953303-200x200.jpg" alt="Манжета резиновая переходная трехлепестковая черная 25х40" class="" />
+									</a>
+			</div>
+					</div>
+	<div class="right">
+		<div class="name"><a href="http://techsnab71.ru/manometr-mt-63p-0-6mpa-m12x1-5-g-klass-tochnosti-1-5">Манжета резиновая переходная трехлепестковая черная 25х40</a></div>
+					</div>
+</div>	    			</div>
+    			    			</div></div></div>    		</div>
+		</div>
+    </div>
+  </div>
+</div>
+
+    [4] => 
+     <div class="advanced-grid advanced-grid-126925932 responsive-margin-top-40 " style="margin-top: 60px;margin-bottom: 0px;">
+                    <div style="background-image: url(image/catalog/111/fon5.jpg);background-position: top center;background-repeat: no-repeat;background-attachment: scroll;">                         <div class="container">
+                    <div style="padding-top: 0px;padding-left: 0px;padding-bottom: 0px;padding-right: 0px;">
+                         <div class="row">
+                                                                                                                                  <div class="col-sm-12">
+                                                                                                                                       <div class="carparts-parallax">
+     <div class="heading">20 лет</div>
+     <div class="heading2">На рынке сантехнического<br> и инженерного оборудования</div>
+
+     <a href="#" class="button carparts-button">О компании ТехСнаб</a>
+</div>                                                                                                                        </div>
+                                                       </div>
+                    </div>
+               </div>
+          </div>
+          
+               </div>
+
+<script type="text/javascript">
+     function force_full_width_126925932() {
+          var p = $(".standard-body .full-width .advanced-grid-126925932");
+          
+                    if(p.size() > 0) {
+               p.width($('body').width());
+               p.css("left", "0px");
+               var position = p.offset();
+               p.css("left", "-" + position.left + "px");
+               p.find(".container").css("padding-left", position.left);
+               p.find(".container").css("padding-right", position.left);
+               
+          }
+                    
+          var s = $(".standard-body .fixed .advanced-grid-126925932");
+                    if(s.size() > 0) {
+               s.width($('.standard-body .fixed .pattern').width());
+               s.css("left", "0px");
+               var position = s.offset();
+               var position2 = $('.standard-body .fixed .pattern').offset();
+               var position3 = position.left-position2.left;
+               s.css("left", "-" + position3 + "px");
+               s.find(".container").css("padding-left", position3);
+               s.find(".container").css("padding-right", position3);
+          }
+                    
+          var c = $(".fixed-body .advanced-grid-126925932");
+                    if(c.size() > 0) {
+               c.width($('.fixed-body .main-fixed').width());
+               c.css("left", "0px");
+               var position = c.offset();
+               var position2 = $('.fixed-body .main-fixed').offset();
+               var position3 = position.left-position2.left;
+               c.css("left", "-" + position3 + "px");
+               c.find(".container").css("padding-left", position3);
+               c.find(".container").css("padding-right", position3);
+          }
+               }
+     
+     force_full_width_126925932();
+     
+     $(window).resize(function() {
+          force_full_width_126925932();
+     });
+</script>
+
+)
+

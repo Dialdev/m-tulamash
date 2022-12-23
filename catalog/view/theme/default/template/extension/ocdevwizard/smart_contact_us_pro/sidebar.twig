@@ -1,0 +1,184 @@
+<div id="{{ _code }}-sidebar-body">
+  <!--
+  ##==================================================================##
+  ## @author    : OCdevWizard                                         ##
+  ## @contact   : ocdevwizard@gmail.com                               ##
+  ## @support   : http://help.ocdevwizard.com                         ##
+  ## @license   : http://license.ocdevwizard.com/Licensing_Policy.pdf ##
+  ## @copyright : (c) OCdevWizard. Smart Contact Us Pro, 2017         ##
+  ##==================================================================##
+  -->
+  <div class="sidebar-heading">
+    <div>
+      {{ heading_title }}
+      <span class="sidebar-close" onclick="{{ _code }}_sidebar_close('{{ form_info['form_id'] }}', '{{ form_info['sidebar_type'] }}');"></span>
+    </div>
+  </div>
+  <div id="check-data" >
+    <div id="{{ _code }}-sidebar-data" class="sidebar-body">
+      {% if (text_info is defined and hide_info_message == 1) %}
+      <div class="info-text-block pos-1">{{ text_info }}</div>
+      {% endif %}
+      <form id="{{ _code }}-form-{{ form_info['form_id'] }}">
+        <input name="form_id" type="hidden" value="{{ form_info['form_id'] }}" />
+        {% if (fields_data) %}
+          <!-- FIELDS DATA -->
+          <div class="{{ _code }}-module-fields">
+            {% for field in fields_data %}
+              {% if (field['type'] == 'textarea') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="{{ field['position']~' ' }} {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <textarea name="{{ field['name'] }}" placeholder="{{ field['title'] }}"></textarea>
+                </div>
+              {% elseif (field['type'] == 'radio') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="{{ field['position']~' ' }} {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <div class="field-heading">{{ field['title'] }}</div>
+                  {% if (field['view_fields']) %}
+                    {% for value in field['view_fields'] %}
+                      <div class="field_radio">
+                        <label>
+                          <input name="{{ field['name'] }}" type="{{ field['type'] }}" value="{{ value }}" /> <span style="display:inline-block;">{{ value }}</span>
+                        </label>
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                </div>
+              {% elseif (field['type'] == 'checkbox') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="{{ field['position']~' ' }} {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <div class="field-heading">{{ field['title'] }}</div>
+                  {% if (field['view_fields']) %}
+                    {% for value in field['view_fields'] %}
+                      <div class="field_checkbox">
+                        <label>
+                          <input name="{{ field['name'] }}[]" type="{{ field['type'] }}" value="{{ value }}" /> <span style="display:inline-block;">{{ value }}</span>
+                        </label>
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                </div>
+              {% elseif (field['type'] == 'select') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="{{ field['position']~' ' }} {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <div class="field-heading">{{ field['title'] }}</div>
+                  <select name="{{ field['name'] }}">
+                    <option value="">{{ text_make_a_choice }}</option>
+                    {% if (field['view_fields']) %}
+                      {% for value in field['view_fields'] %}
+                        <option value="{{ value }}">{{ value }}</option>
+                      {% endfor %}
+                    {% endif %}
+                  </select>
+                </div>
+              {% elseif (field['type'] == 'date') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="{{ field['position']~' ' }} {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <input type="text" name="{{ field['name'] }}" value="" class="{{ _code }}-sidebar-date-field" placeholder="{{ field['title'] }}"/>
+                </div>
+              {% elseif (field['type'] == 'time') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="{{ field['position']~' ' }} {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <input type="text" name="{{ field['name'] }}" value="" class="{{ _code }}-sidebar-time-field" placeholder="{{ field['title'] }}"/>
+                </div>
+              {% elseif (field['type'] == 'date_and_time') %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="{{ field['position']~' ' }} {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <input type="text" name="{{ field['name'] }}" value="" class="{{ _code }}-sidebar-date-and-time-field" placeholder="{{ field['title'] }}"/>
+                </div>
+              {% else %}
+                <div {{ field['css_id'] ? 'id="'~field['css_id']~'"' : "" }} data-error-name="{{ field['name'] }}" class="{{ field['position']~' ' }} {{ field['css_class'] ? field['css_class'] : "" }}">
+                  <input name="{{ field['name'] }}" type="{{ field['type'] }}" placeholder="{{ field['title'] }}" />
+                </div>
+              {% endif %}
+              {% if (field['mask']) %}
+                <script type="text/javascript">
+                  $("#{{ _code }}-sidebar-body [name='{{ field['name'] }}']").inputmask('{{ field['mask'] }}');
+                </script>
+              {% endif %}
+            {% endfor %}
+            {% if (informations) %}
+              <div id="sidebar-require-information" data-error-name="require_information">{{ informations }} <input type="checkbox" name="require_information" value="{{ require_information ? 1 : 0 }}" /></div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </form>
+      {% if (text_info is defined and hide_info_message == 2) %}
+      <div class="info-text-block pos-2">{{ text_info }}</div>
+      {% endif %}
+    </div>
+  </div>
+  <!-- BUTTONS -->
+  <div class="sidebar-footer">
+    <div>
+      <input type="button" onclick="save_record('{{ form_info['form_id'] }}');" value="{{ button_save }}" class="save-button-bottom" />
+      <input type="button" onclick="{{ _code }}_sidebar_close('{{ form_info['form_id'] }}', '{{ form_info['sidebar_type'] }}');" value="{{ button_go_back }}" class="close-button-bottom" />
+    </div>
+  </div>
+  <script type="text/javascript">
+    flatpickr.localize(flatpickr.l10ns.{{ _language_code }});
+
+    flatpickr('.{{ _code }}-sidebar-date-field', {
+      dateFormat: "Y-m-d",
+      allowInput: true
+    });
+    
+    flatpickr('.{{ _code }}-sidebar-date-and-time-field', {
+      enableTime: true,
+      dateFormat: "Y-m-d H:i",
+      time_24hr: true,
+      allowInput: true
+    });
+    
+    flatpickr('.{{ _code }}-sidebar-time-field', {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
+      time_24hr: true,
+      allowInput: true
+    });
+    
+    function maskElement(element, status) {
+      if (status == true) {
+        $('<div/>')
+        .attr('class', '{{ _code }}-sidebar-loadmask')
+        .prependTo(element);
+        $('<div class="{{ _code }}-sidebar-loadmask-loading" />').insertAfter($('.{{ _code }}-sidebar-loadmask'));
+      } else {
+        $('.{{ _code }}-sidebar-loadmask').remove();
+        $('.{{ _code }}-sidebar-loadmask-loading').remove();
+      }
+    }
+
+    $('body').click(function(e) {
+      if (!$(e.target).closest('#{{ _code }}-form-{{ form_info['form_id'] }}').length) {
+        {{ _code }}_sidebar_close('{{ form_info['form_id'] }}', '{{ form_info['sidebar_type'] }}');
+      }
+    });
+
+    function save_record(form_id) {
+      var $button_send = $('#{{ _code }}-sidebar-body .save-button-bottom');
+      $button_send.attr("disabled", true);
+      maskElement('#smcup-sidebar-data', true);
+      $.ajax({
+        type: 'post',
+        url: 'index.php?route=extension/ocdevwizard/{{ _name }}/save_record',
+        dataType: 'json',
+        data: $('#{{ _code }}-form-'+form_id).serialize(),
+        success: function(json) {
+          $('#{{ _code }}-sidebar-data .alert-success, #{{ _code }}-sidebar-data .sidebar-text-danger').remove();
+
+          if (json['error']) {
+            if (json['error']['field']) {
+              maskElement('#smcup-sidebar-data', false);
+              for (i in json['error']['field']) {
+                var element = $('#{{ _code }}-form-'+form_id+' [data-error-name='+i+']');
+                element.append('<div class="sidebar-text-danger">'+json['error']['field'][i]+'</div>');
+              }
+            }
+            $button_send.attr("disabled", false);
+          } else {
+            if (json['output']) {
+              maskElement('#smcup-sidebar-data', false);
+              $button_send.remove();
+              $('#{{ _code }}-sidebar-data').html('<div class="sidebar-success-message">'+json['output']+'</div>');
+            }
+          }
+        }
+      });
+    }
+  </script>
+</div>

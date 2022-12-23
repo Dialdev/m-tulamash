@@ -1,0 +1,35 @@
+/*
+##==================================================================##
+## @author    : OCdevWizard                                         ##
+## @contact   : ocdevwizard@gmail.com                               ##
+## @support   : http://help.ocdevwizard.com                         ##
+## @license   : http://license.ocdevwizard.com/Licensing_Policy.pdf ##
+## @copyright : (c) OCdevWizard. Smart Contact Us Pro, 2017         ##
+##==================================================================##
+*/
+
+#smcup-modal-body,
+#smcup-sidebar-body,
+.smcup-center-body {
+  direction: rtl;
+}
+#smcup-modal-body .modal-close,
+#smcup-sidebar-body .sidebar-close {
+  left: 15px !important;
+  right: initial;;
+}
+#smcup-modal-body .modal-heading,
+#smcup-sidebar-body .sidebar-heading {
+  text-align: right;
+}
+.smcup-center-body .radio input[type=radio],
+.smcup-center-body .checkbox input[type=checkbox] {
+  float: right;
+  margin-left: 7px;
+}
+#smcup-modal-body .smcup-module-fields {
+  text-align: right;
+}
+.info-text-block {
+  text-align: right;
+}

@@ -1,0 +1,172 @@
+<!--
+##==================================================================##
+## @author    : OCdevWizard                                         ##
+## @contact   : ocdevwizard@gmail.com                               ##
+## @support   : http://help.ocdevwizard.com                         ##
+## @license   : http://license.ocdevwizard.com/Licensing_Policy.pdf ##
+## @copyright : (c) OCdevWizard. Smart Contact Us Pro, 2017         ##
+##==================================================================##
+-->
+
+{% if (histories) %}
+  <div class="btn-group">
+    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-trash-o"></i> {{ button_delete_menu }} <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a onclick="delete_all(0,'record');">{{ button_delete_all }}</a></li>
+      <li><a onclick="delete_all_selected(0,'record');">{{ button_delete_selected }}</a></li>
+    </ul>
+  </div>
+{% endif %}
+<button type="button" onclick="$('a[href=#unviewed-saved-record-block]').click();" class="btn btn-primary"><i class="fa fa-refresh"></i> {{ button_update }}</button>
+<div class="special-margin"></div>
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td width="1" style="text-align: center;"><input type="checkbox" onclick="$('#unviewed-saved-record-block input[name*=\'selected\']').attr('checked', this.checked);" /></td>
+        <td class="text-left" width="15%">{{ column_record_details }}</td>
+        <td class="text-left">{{ column_record_visitor_data }}</td>
+        <td class="text-left">{{ column_extra_user_info }}</td>
+        <td class="text-left">{{ column_record_date }}</td>
+        <td class="text-left">{{ column_record_status }}</td>
+        <td class="text-center" width="10%">{{ column_record_action }}</td>
+      </tr>
+    </thead>
+    <tbody>
+    {% if (histories) %}
+      {% for history in histories %}
+      <tr>
+        <td style="text-align: center;"><input type="checkbox" name="selected[]" value="{{ history['record_id'] }}" /></td>
+        <td class="text-left">
+          {% if (history['form_check']) %}
+          <p><strong>{{ text_form_name }}</strong> <a href="javascript:void(0)" onclick="open_form({id: '{{ history['form_id'] }}'});">{{ history['heading'] }}</a></p>
+          {% else %}
+          <p><strong>{{ text_form_name }}</strong> {{ history['heading'] }}</p>
+          {% endif %}
+          {% if (history['store_name'] and history['store_url']) %}
+          <p><strong>{{ text_store }}</strong> <a href="{{ history['store_url'] }}" target="_blank">{{ history['store_name'] }}</a></p>
+          {% endif %}
+        </td>
+        <td>
+          <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-visitor-data-{{ history['record_id'] }}" autocomplete="off">{{ button_view_visitor_data }}</button>
+          <!-- Modal -->
+          <div class="modal fade" id="modal-visitor-data-{{ history['record_id'] }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">{{ text_modal_visitor_data }}</h4>
+                </div>
+                <div class="modal-body">
+                  {% if (history['field_data']) %}
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <td class="col-sm-2">{{ column_record_modal_record_id }}</td>
+                          <td class="col-sm-10">{{ column_record_modal_referer }}</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>{{ history['record_id'] }}</td>
+                          <td>{{ history['referer'] }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="table table-bordered" style="margin-bottom: 0;">
+                      <thead>
+                        <tr>
+                          <td class="col-sm-6">{{ column_record_modal_heading }}</td>
+                          <td class="col-sm-6">{{ column_record_modal_value }}</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for record in history['field_data'] %}
+                        <tr>
+                          <td>{{ record['title'] }}</td>
+                          <td>{% for value in record['values'] %}{{ value }}{% endfor %}</td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <script type="text/javascript">
+            $('#modal-visitor-data-{{ history['record_id'] }}').on('hidden.bs.modal', function () {
+              $.ajax({
+                type: 'get',
+                url:  'index.php?route=extension/ocdevwizard/{{ _name }}/history_update_viewed&{{ token }}&record_id={{ history['record_id'] }}',
+                dataType: 'json',
+                success: function(json) {
+                  $('#history0').load('index.php?route=extension/ocdevwizard/{{ _name }}/history&{{ token }}&filter_store_id={{ store_id }}&filter_status=0');
+                }
+              });
+            });
+          </script>
+        </td>
+        <td class="text-left">
+          <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-extra-user-info-{{ history['record_id'] }}" autocomplete="off">{{ button_view_extra_info }}</button>
+          <!-- Modal -->
+          <div class="modal fade" id="modal-extra-user-info-{{ history['record_id'] }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">{{ text_modal_extra_info_heading }}</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="table-responsive">
+                    <table class="table table-bordered" style="margin-bottom:0">
+                      <thead>
+                        <tr>
+                          <td class="text-left">{{ column_ip }}</td>
+                          <td class="text-left">{{ column_record_user_agent }}</td>
+                          <td class="text-left">{{ column_record_acept_language }}</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-left">
+                            {{ history['ip'] }} <button type="button" onclick="window.open('http://www.checkip.com/ip/{{ history['ip'] }}','_blank');return false;" class="btn btn-default btn-xs" data-toggle="tooltip" title="{{ button_check_ip }}" data-placement="right"><i class="fa fa-info-circle"></i> {{ text_check }}</button>
+                          </td>
+                          <td class="text-left">{{ history['user_agent'] }}</td>
+                          <td class="text-left">{{ history['accept_language'] }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="text-left">
+          <p><strong>{{ text_date_added }}</strong> {{ history['date_added'] }}</p>
+        </td>
+        <td class="text-left">{{ history['status'] }}</td>
+        <td class="text-center">
+          <a onclick="confirm('{{ text_are_you_sure }}') ? delete_selected(0,'record',{{ history['record_id'] }}) : false;" data-toggle="tooltip" title="" class="btn btn-warning" data-original-title="{{ button_delete }}"><i class="fa fa-trash-o"></i></a>
+        </td>
+      </tr>
+      {% endfor %}
+      {% else %}
+        <tr>
+          <td class="text-center" colspan="8">{{ text_no_results }}</td>
+        </tr>
+      {% endif %}
+    </tbody>
+  </table>
+</div>
+{% if (histories) %}
+<div class="row">
+  <div class="col-sm-6 text-left">{{ pagination }}</div>
+  <div class="col-sm-6 text-right">{{ results }}</div>
+</div>
+{% endif %}
